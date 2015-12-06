@@ -1,0 +1,5119 @@
+'.source.jade':
+	'col':
+		'prefix': 'col'
+		'body': '.col-xs-$1.col-sm-$2.col-md-$3.col-lg-$4'
+	'col-1':
+		'prefix': 'col-1'
+		'body': '.col-xs-1.col-sm-1.col-md-1.col-lg-1'
+	'col-2':
+		'prefix': 'col-2'
+		'body': '.col-xs-2.col-sm-2.col-md-2.col-lg-2'
+	'col-3':
+		'prefix': 'col-3'
+		'body': '.col-xs-3.col-sm-3.col-md-3.col-lg-3'
+	'col-4':
+		'prefix': 'col-4'
+		'body': '.col-xs-4.col-sm-4.col-md-4.col-lg-4'
+	'col-5':
+		'prefix': 'col-5'
+		'body': '.col-xs-5.col-sm-5.col-md-5.col-lg-5'
+	'col-6':
+		'prefix': 'col-6'
+		'body': '.col-xs-6.col-sm-6.col-md-6.col-lg-6'
+	'col-7':
+		'prefix': 'col-7'
+		'body': '.col-xs-7.col-sm-7.col-md-7.col-lg-7'
+	'col-8':
+		'prefix': 'col-8'
+		'body': '.col-xs-8.col-sm-8.col-md-8.col-lg-8'
+	'col-9':
+		'prefix': 'col-9'
+		'body': '.col-xs-9.col-sm-9.col-md-9.col-lg-9'
+	'col-10':
+		'prefix': 'col-10'
+		'body': '.col-xs-10.col-sm-10.col-md-10.col-lg-10'
+	'col-11':
+		'prefix': 'col-11'
+		'body': '.col-xs-11.col-sm-11.col-md-11.col-lg-11'
+	'col-12':
+		'prefix': 'col-12'
+		'body': '.col-xs-12.col-sm-12.col-md-12.col-lg-12'
+
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+
+	'bs-accordion':
+		'prefix': 'bs-accordion'
+		'body': '''
+	#${1:accordion-id}.panel-group
+			.panel.panel-default
+				.panel-heading
+					h4.panel-title
+						a.accordion-toggle.collapsed(data-toggle="collapse", data-parent="#${1:accordion-id}", href="#collapseOne")
+							| Collapsible Group Item #1
+				#collapseOne.panel-collapse.collapse
+					.panel-body
+						| Panel body
+			.panel.panel-default
+				.panel-heading
+					h4.panel-title
+						a.accordion-toggle.collapsed(data-toggle="collapse", data-parent="#${1:accordion-id}", href="#collapseTwo")
+							| Collapsible Group Item #2
+				#collapseTwo.panel-collapse.in
+					.panel-body
+						| Panel body
+	'''
+	'bs-alert-danger':
+		'prefix': 'bs-alert-danger'
+		'body': '''
+	.alert.alert-success(role="alert")
+		button.close(type="button", data-dismiss="alert")
+			span(aria-hidden="true") &times;
+			span.sr-only Close
+		strong ${1:Title!}
+		| ${2:Alert body ...}
+	'''
+	'bs-alert-info':
+		'prefix': 'bs-alert-info'
+		'body': '''
+	.alert.alert-warning(role="alert")
+		button.close(type="button", data-dismiss="alert")
+			span(aria-hidden="true") &times;
+			span.sr-only Close
+		strong ${1:Title!}
+		| ${2:Alert body ...}
+	'''
+	'bs-alert-success':
+		'prefix': 'bs-alert-success'
+		'body': '''
+	.alert(role="alert")
+		button.close(type="button", data-dismiss="alert")
+			span(aria-hidden="true") &times;
+			span.sr-only Close
+		strong ${1:Title!}
+		| ${2:Alert body ...}
+	'''
+	'bs-alert-warning':
+		'prefix': 'bs-alert-warning'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-block.btn-danger ${3:button}
+	'''
+	'bs-alert':
+		'prefix': 'bs-alert'
+		'body': '''
+	span.badge ${1:Badge}
+	'''
+	'bs-badge':
+		'prefix': 'bs-badge'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-block.btn-default ${3:button}
+	'''
+	'bs-block-button-danger':
+		'prefix': 'bs-block-button-danger'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-block.btn-{3:default}.disabled ${4:button}
+	'''
+	'bs-block-button-default':
+		'prefix': 'bs-block-button-default'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-block.btn-primary ${3:button}
+	'''
+	'bs-block-button-disabled':
+		'prefix': 'bs-block-button-disabled'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-block.btn-success ${4:button}
+	'''
+	'bs-block-button-info':
+		'prefix': 'bs-block-button-info'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-block.btn-warning ${3:button}
+	'''
+	'bs-block-button-primary':
+		'prefix': 'bs-block-button-primary'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-block.btn-default ${3:button}
+	'''
+	'bs-block-button-success':
+		'prefix': 'bs-block-button-success'
+		'body': '''
+	ol.breadcrumb
+		li: a(href="${1:#}") ${2:Home}
+		li.active ${3:Current}
+	'''
+	'bs-block-button-warning':
+		'prefix': 'bs-block-button-warning'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-danger ${3:button}
+	'''
+	'bs-block-button':
+		'prefix': 'bs-block-button'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-default ${3:button}
+	'''
+	'bs-breadcrumbs':
+		'prefix': 'bs-breadcrumbs'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-${3:primary}.disabled ${4:button}
+	'''
+	'bs-button-danger':
+		'prefix': 'bs-button-danger'
+		'body': '''
+	.btn-group-vertical
+		button${1:(type="${2:button}")}.btn.btn-default Top
+		button${1:(type="${2:button}")}.btn.btn-default Middle
+		button${1:(type="${2:button}")}.btn.btn-default Bottom
+	'''
+	'bs-button-default':
+		'prefix': 'bs-button-default'
+		'body': '''
+	.btn-group
+		button${1:(type="${2:button}")}.btn.btn-default Left
+		button${1:(type="${2:button}")}.btn.btn-default Middle
+		button${1:(type="${2:button}")}.btn.btn-default Right
+	'''
+	'bs-button-disabled':
+		'prefix': 'bs-button-disabled'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-info ${3:button}
+	'''
+	'bs-button-group-vertical':
+		'prefix': 'bs-button-group-vertical'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-primary ${3:button}
+	'''
+	'bs-button-group':
+		'prefix': 'bs-button-group'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-success ${3:button}
+	'''
+	'bs-button-info':
+		'prefix': 'bs-button-info'
+		'body': '''
+	.btn-toolbar
+		.btn-group
+		.btn-group
+		.btn-group
+	'''
+	'bs-button-primary':
+		'prefix': 'bs-button-primary'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-warning ${3:button}
+	'''
+	'bs-button-success':
+		'prefix': 'bs-button-success'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-default ${3:button}
+	'''
+	'bs-button-toolbar':
+		'prefix': 'bs-button-toolbar'
+		'body': '''
+	#${1:carousel-id}.carousel.slide
+		ol.carousel-indicators
+			li.active(data-target="#${1:carousel-id}", data-slide-to="0")
+			li(data-target="#${1:carousel-id}", data-slide-to="1")
+		.carousel-inner
+			.item.active
+				img(src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzc3NyI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjQ1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojN2E3YTdhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjU2cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+Rmlyc3Qgc2xpZGU8L3RleHQ+PC9zdmc+", alt="")
+			.item
+				img(src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzc3NyI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjQ1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojN2E3YTdhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjU2cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+Rmlyc3Qgc2xpZGU8L3RleHQ+PC9zdmc+", alt="")
+		a.left.carousel-control(href="#${1:carousel-id}", data-slide="prev")
+			span.icon-prev
+		a.right.carousel-control(href="#${1:carousel-id}", data-slide="next")
+			span.icon-next
+	'''
+	'bs-button-warning':
+		'prefix': 'bs-button-warning'
+		'body': '''
+	//
+		Latest compiled and minified CSS
+	link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css", rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous")
+	'''
+	'bs-button':
+		'prefix': 'bs-button'
+		'body': '''
+	//
+		Latest compiled and minified JS
+	script(src="https://code.jquery.com/jquery-1.11.3.min.js")
+	script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous")
+	'''
+	'bs-carousel':
+		'prefix': 'bs-carousel'
+		'body': '''
+	.col-xs-1.col-sm-1.col-md-1.col-lg-1
+	'''
+	'bs-cdn-css':
+		'prefix': 'bs-cdn-css'
+		'body': '''
+	//
+		Latest compiled and minified CSS & JS
+	link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css", rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous")
+	script(src="https://code.jquery.com/jquery-1.11.3.min.js")
+	script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous")
+	'''
+	'bs-cdn-js':
+		'prefix': 'bs-cdn-js'
+		'body': '''
+	.col-xs-10.col-sm-10.col-md-10.col-lg-10
+	'''
+	'bs-cdn':
+		'prefix': 'bs-cdn'
+		'body': '''
+	.col-xs-11.col-sm-11.col-md-11.col-lg-11
+	'''
+	'bs-col-1':
+		'prefix': 'bs-col-1'
+		'body': '''
+	.col-xs-12.col-sm-12.col-md-12.col-lg-12
+	'''
+	'bs-col-10':
+		'prefix': 'bs-col-10'
+		'body': '''
+	.col-xs-2.col-sm-2.col-md-2.col-lg-2
+	'''
+	'bs-col-11':
+		'prefix': 'bs-col-11'
+		'body': '''
+	.col-xs-3.col-sm-3.col-md-3.col-lg-3
+	'''
+	'bs-col-12':
+		'prefix': 'bs-col-12'
+		'body': '''
+	.col-xs-4.col-sm-4.col-md-4.col-lg-4
+	'''
+	'bs-col-2':
+		'prefix': 'bs-col-2'
+		'body': '''
+	.col-xs-5.col-sm-5.col-md-5.col-lg-5
+	'''
+	'bs-col-3':
+		'prefix': 'bs-col-3'
+		'body': '''
+	.col-xs-6.col-sm-6.col-md-6.col-lg-6
+	'''
+	'bs-col-4':
+		'prefix': 'bs-col-4'
+		'body': '''
+	.col-xs-7.col-sm-7.col-md-7.col-lg-7
+	'''
+	'bs-col-5':
+		'prefix': 'bs-col-5'
+		'body': '''
+	.col-xs-8.col-sm-8.col-md-8.col-lg-8
+	'''
+	'bs-col-6':
+		'prefix': 'bs-col-6'
+		'body': '''
+	.col-xs-9.col-sm-9.col-md-9.col-lg-9
+	'''
+	'bs-col-7':
+		'prefix': 'bs-col-7'
+		'body': '''
+	${1:.col-xs-${2}}${3:.col-sm-${4}}${5:.col-md-${6}}.${7:col-lg-${8}}
+	'''
+	'bs-col-8':
+		'prefix': 'bs-col-8'
+		'body': '''
+	form.form-horizontal(action="${1}", method="${2:POST}", role="form")
+		.form-group
+			legend ${3:Form title}
+	  	| ${4}
+		.form-group
+			.col-sm-10.col-sm-offset-2
+				button.btn.btn-primary(type="submit") ${5:Submit}
+	'''
+	'bs-col-9':
+		'prefix': 'bs-col-9'
+		'body': '''
+	form.form-inline(action="${1}", method="${2:POST}", role="form")
+		${3:.form-group
+			label.sr-only(for="") label
+			input.form-control(type="email", placeholder="Input field")}${4}
+		button.btn.btn-primary(type="submit") ${5:Submit}
+	'''
+	'bs-col':
+		'prefix': 'bs-col'
+		'body': '''
+	label(for="${1}") ${2}
+	'''
+	'bs-form-horizontal':
+		'prefix': 'bs-form-horizontal'
+		'body': '''
+	form(action="${1}", method="${2:POST}", role="form")
+		legend ${3:Form title}
+		.form-group
+			label(for="") ${4:label}
+			input.form-control(type="text", placeholder="Input field")${5}
+		button.btn.btn-primary(type="submit") ${6:Submit}
+		${7}
+	'''
+	'bs-form-inline':
+		'prefix': 'bs-form-inline'
+		'body': '''
+	extend layout
+
+	block main
+
+	'''
+	'bs-form-label':
+		'prefix': 'bs-form-label'
+		'body': '''
+	doctype
+	<!--[if IE 8]><html class="lt-ie9 no-js"><![endif]-->
+	<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+	head
+		//- TODO: Check if it's the good charset
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		title
+		meta(name="description", content="")
+		meta(name="viewport", content="width=device-width,initial-scale=1")
+		//- TODO : Place favicon.ico and apple-touch-icon.png in the root directory
+		block css
+			link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css", rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous")
+		block top-script
+			//- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
+			<!--[if lt IE 9]>
+			script(src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.0/html5shiv.js")
+			script(src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js")
+			<![endif]-->
+	body
+		//- Add your site or application content here
+		block main
+
+		block bottom-script
+			script(src="https://code.jquery.com/jquery-1.11.3.min.js")
+			script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous")
+			script(src="//cdnjs.cloudflare.com/ajax/libs/holder/2.3.0/holder.js")
+	'''
+	'bs-form':
+		'prefix': 'bs-form'
+		'body': '''
+	doctype
+	<!--[if IE 8]><html class="lt-ie9 no-js"><![endif]-->
+	<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+	head
+		//- TODO: Check if it's the good charset
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		title
+		meta(name="description", content="")
+		meta(name="viewport", content="width=device-width,initial-scale=1")
+		//- TODO : Place favicon.ico and apple-touch-icon.png in the root directory
+		link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css", rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous")
+		// HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
+		<!--[if lt IE 9]>
+		script(src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.0/html5shiv.js")
+		script(src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js")
+		<![endif]-->
+	body
+		//- Add your site or application content here
+
+		script(src="https://code.jquery.com/jquery-1.11.3.min.js")
+		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous")
+		script(src="//cdnjs.cloudflare.com/ajax/libs/holder/2.3.0/holder.js")
+	'''
+	'bs-h5bp-index-jade':
+		'prefix': 'bs-h5bp-index-jade'
+		'body': '''
+	span.glyphicon.glyphicon-${1:icon}
+	'''
+	'bs-h5bp-layout-jade':
+		'prefix': 'bs-h5bp-layout-jade'
+		'body': '''
+	i.icon.icon-${1:icon}
+	'''
+	'bs-html5-template':
+		'prefix': 'bs-html5-template'
+		'body': '''
+	img(${1:data-}src="${2:holder.js/${3:100x200}/${4:#999:#fff}/${5:text:${6:hello world}}}", alt="${7}")${8:.img-responsive}
+	'''
+	'bs-icon-glyphicon':
+		'prefix': 'bs-icon-glyphicon'
+		'body': '''
+	.checkbox
+		label
+		input(type="checkbox", value="${1}") ${2:Checkbox}
+	'''
+	'bs-icon':
+		'prefix': 'bs-icon'
+		'body': '''
+	.form-group
+		label(for="${1}").col-${2:sm-2}.control-label ${3}
+		.col-${4:sm-10}
+			input(type="color", name="${1}", id="${1}" ${5:, value="${6}"}${7:, title="${8}"}${9:, required="required"}).form-control
+	'''
+	'bs-image':
+		'prefix': 'bs-image'
+		'body': '''
+	.form-group
+		label(for="${1}").col-${2:sm-2}.control-label ${3}
+		.col-${4:sm-10}
+			input(type="date", name="${1}", id="${1}"${5:, value="${6}"} ${7:, required="required"} ${8:, title="${9}"} ).form-control
+	'''
+	'bs-input-checkbox':
+		'prefix': 'bs-input-checkbox'
+		'body': '''
+	input(type="date", name="${1}", id="${1}", .form-control"${2:, value="${3}"}${4:, required="required"}${5:, title="${6}"})
+	'''
+	'bs-input-color-h':
+		'prefix': 'bs-input-color-h'
+		'body': '''
+	.form-group
+		label(for="${1}").col-${2:sm-2}.control-label ${3}
+		.col-${4:sm-10}
+			input(type="email", name="${1}", id="${1}"${5:, value="${6}"}${7:, required="required"}${8:, title="${9}"}).form-control
+	'''
+	'bs-input-color':
+		'prefix': 'bs-input-color'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-block.btn-info ${3:button}
+	'''
+	'bs-input-date-h':
+		'prefix': 'bs-input-date-h'
+		'body': '''
+	input(type="email", name="${1}", id="${1}"${2:, value="${3}"}${4:, required="required"}${5:, title="${6}"}).form-control
+	'''
+	'bs-input-date':
+		'prefix': 'bs-input-date'
+		'body': '''
+	label(for="${1}")${2:.col-sm-2} ${3}
+	'''
+	'bs-input-email-h':
+		'prefix': 'bs-input-email-h'
+		'body': '''
+	input(type="hidden", name="${1}", id="${1}"${2:, value="${3}"}).form-control
+	'''
+	'bs-input-email':
+		'prefix': 'bs-input-email'
+		'body': '''
+	.form-group
+		label(for="${1}").col-${2:sm-2}.control-label ${3}
+		.col-${4:sm-10}
+			input(type="month", name="${1}", id="${1}"${5:, value="${6}"}${7:, required="required"}${8:, title="${9}"}).form-control
+	'''
+	'bs-input-hidden':
+		'prefix': 'bs-input-hidden'
+		'body': '''
+	input(type="month", name="${1}", id="input${1}"${2:, value="${3}"}${4:, required="required"}${5:, title="${6}"}).form-control
+	'''
+	'bs-input-label':
+		'prefix': 'bs-input-label'
+		'body': '''
+	.form-group
+		label(for="${1}").col-${2:sm-2}.control-label ${3}
+		.col-${4:sm-10}
+			input(type="number", name="${1}", id="${1}"${5:, value="${6}"}${7:, min="${8}"}${9:, max="${10}"}${11:, step="${12}"}${13:, required="required"}${14:, title="${15}"}).form-control
+	'''
+	'bs-input-month-h':
+		'prefix': 'bs-input-month-h'
+		'body': '''
+	input(type="number", name="${1}", id="${1}"${2:, value="${3}"}${4:, min="${5}"}${6:, max="${7}"}${8:, step="${9}"}${10:, required="required"}${11:, title="${12}"}).control-label
+	'''
+	'bs-input-month':
+		'prefix': 'bs-input-month'
+		'body': '''
+	input(type="color", name="${1}", id=""${2:, value="${3}"}${4:, required="required"}${5:, title="${6}"}).form-control
+	'''
+	'bs-input-number-h':
+		'prefix': 'bs-input-number-h'
+		'body': '''
+	.form-group
+		label(for="${1}").col-${2:sm-2}.control-label ${3}
+		.col-${4:sm-10}
+			input(type="password", name="${1}", id="${1}"${5:, required="required"}${6:, title="${7}"}).form-control
+	'''
+	'bs-input-number':
+		'prefix': 'bs-input-number'
+		'body': '''
+	.radio
+		label
+			input(type="radio", name="${1}", id="${1}", value="${2}"${3:, checked="checked"})
+			| ${4:Radio Box}
+	'''
+	'bs-input-password-h':
+		'prefix': 'bs-input-password-h'
+		'body': '''
+	.form-group
+		label(for="${1}").col-${2:sm-2}.control-label ${3}
+		.col-${4:sm-10}
+			input(type="range", name="${1}", id="${1}"${5:, value="${6}"}${7:, min="${8}"}${9:, max="${10}"}${11:, step="${12}"}${13:, required="required"}${14:, title="${15}"}).form-control
+	'''
+	'bs-input-password':
+		'prefix': 'bs-input-password'
+		'body': '''
+	input(type="password", name="${1}", id="${1}"${2:, required="required"}${3:, title="${4}"}).form-control
+	'''
+	'bs-input-radio':
+		'prefix': 'bs-input-radio'
+		'body': '''
+	input(type="range", name="${1}", id="${1}"${5:, value="${6}"}${7:, min="${8}"}${9:, max="${10}"}${11:, step="${12}"}${13:, required="required"}${14:, title="${15}"}).form-control
+	'''
+	'bs-input-range-h':
+		'prefix': 'bs-input-range-h'
+		'body': '''
+	.form-group
+		.col-sm-${1:10}.col-offset-${2:2}
+			input(type="reset", value="${3:Reset}").btn.btn-default
+	'''
+	'bs-input-range':
+		'prefix': 'bs-input-range'
+		'body': '''
+	.alert.alert-info(role="alert")
+		button.close(type="button", data-dismiss="alert")
+			span(aria-hidden="true") &times;
+			span.sr-only Close
+		strong ${1:Title!}
+		| ${2:Alert body ...}
+	'''
+	'bs-input-reset-h':
+		'prefix': 'bs-input-reset-h'
+		'body': '''
+	input(type="reset", value="${1:Reset}").btn.btn-default
+	'''
+	'bs-input-reset':
+		'prefix': 'bs-input-reset'
+		'body': '''
+	.form-group
+		label(for="${1}").col-${2:sm-2}.control-label ${3}
+		.col-${4:sm-10}
+			input(type="search", name="${1}", id="${1}"${5:, value="${6}"}${7:, required="required"}${8:, title="${9}"}).form-control
+	'''
+	'bs-input-search-h':
+		'prefix': 'bs-input-search-h'
+		'body': '''
+	input(type="search", name="${1}", id="${1}"${5:, value="${6}"}${7:, required="required"}${8:, title="${9}"}).form-control
+	'''
+	'bs-input-search':
+		'prefix': 'bs-input-search'
+		'body': '''
+	.form-group
+		label(for="${1}").col-${2:sm-2}.control-label ${3}
+		.col-${4:sm-10}
+			select(name="${1}", id="${1}").form-control
+				option(value="") ${5:-- Select One --}
+	'''
+	'bs-input-select-h':
+		'prefix': 'bs-input-select-h'
+		'body': '''
+	select(name="${1}", id="${1}").form-control ${2}
+				option(value="") ${3:-- Select One --}
+	'''
+	'bs-input-select':
+		'prefix': 'bs-input-select'
+		'body': '''
+	.form-group
+		.col-${1:sm-10}.col-offset-2
+			button(type="submit").btn.btn-primary ${2:Submit}
+	'''
+	'bs-input-submit-h':
+		'prefix': 'bs-input-submit-h'
+		'body': '''
+	button(type="submit").btn.btn-primary ${1:Submit}
+	'''
+	'bs-input-submit':
+		'prefix': 'bs-input-submit'
+		'body': '''
+	.form-group
+		label(for="${1}").col-${2:sm-2}.control-label ${3}
+		.col-${4:sm-10}
+			input(type="tel", name="${1}", id="${1}"${5:, value="${6}"}${7:, required="required"}${8:, title="${9}"}).form-control
+	'''
+	'bs-input-tel-h':
+		'prefix': 'bs-input-tel-h'
+		'body': '''
+	input(type="tel", name="${1}", id="${1}"${2:, value="${3}"}${4:, required="required"}${5:, title="${6}"}).form-control
+	'''
+	'bs-input-tel':
+		'prefix': 'bs-input-tel'
+		'body': '''
+	.form-group
+		label(for="${1}").col-${2:sm-2}.control-label ${3}
+		.col-${4:sm-10}
+			input(type="text", name="${1}", id="${1}"${5:, value="${6}"}${7:, required="required"}${8:, pattern="${9}"}${10:, title="${11}"}).form-control
+	'''
+	'bs-input-text-h':
+		'prefix': 'bs-input-text-h'
+		'body': '''
+	input(type="text", name="${1}", id="${1}"${5:, value="${6}"}${7:, required="required"}${8:, pattern="${9}"}${10:, title="${11}"}).form-control
+	'''
+	'bs-input-text':
+		'prefix': 'bs-input-text'
+		'body': '''
+	.form-group
+		label(for="${1}").col-${2:sm-2}.control-label ${3}
+		.col-${4:sm-10}
+			input(type="time", name="${1}", id="${1}"${5:, value="${6}"}${7:, required="required"}${8:, title="${9}"}).form-control
+	'''
+	'bs-input-time-h':
+		'prefix': 'bs-input-time-h'
+		'body': '''
+	input(type="time", name="${1}", id="${1}"${2:, value="${3}"}${4:, required="required"}${5:, title="${6}"}).form-control
+	'''
+	'bs-input-time':
+		'prefix': 'bs-input-time'
+		'body': '''
+	.form-group
+		label(for="${1}").col-${2:sm-2}.control-label ${3}
+		.col-${4:sm-10}
+			input(type="url", name="${1}", id="${1}"${5:, value="${6}"}${7:, required="required"}${8:, title="${9}"}).form-control
+	'''
+	'bs-input-url-h':
+		'prefix': 'bs-input-url-h'
+		'body': '''
+	input(type="url", name="${1}", id="${1}"${3:, value="${4}"}${5:, required="required"}${6:, title="${7}"}).form-control
+	'''
+	'bs-input-url':
+		'prefix': 'bs-input-url'
+		'body': '''
+	.form-group
+		label(for="${1}").col-${2:sm-2}.control-label ${3}
+		.col-${4:sm-10}
+			input(type="week", name="${1}", id="${1}"${5:, value="${6}"}${7:, required="required"}${8:, title="${9}"}).form-control
+	'''
+	'bs-input-week-h':
+		'prefix': 'bs-input-week-h'
+		'body': '''
+	input(type="week", name="${1}", id="${1}"${2:, value="${3}"}${4:, required="required"}${5:, title="${6}"}).form-control
+	'''
+	'bs-input-week':
+		'prefix': 'bs-input-week'
+		'body': '''
+	.jumbotron
+		.container
+			h1 ${1:Hello, world!}
+			p ${2:Contents ...}
+			p
+				a(href="${3:#}").btn.btn-primary.btn-large ${4:Learn more}
+	'''
+	'bs-jumbotron':
+		'prefix': 'bs-jumbotron'
+		'body': '''
+	span.label.label-danger ${1:Label}
+	'''
+	'bs-label-danger':
+		'prefix': 'bs-label-danger'
+		'body': '''
+	span.label.label-default ${1:Label}
+	'''
+	'bs-label-default':
+		'prefix': 'bs-label-default'
+		'body': '''
+	span.label.label-success ${1:Label}
+	'''
+	'bs-label-info':
+		'prefix': 'bs-label-info'
+		'body': '''
+	span.label.label-info ${1:Label}
+	'''
+	'bs-label-success':
+		'prefix': 'bs-label-success'
+		'body': '''
+	span.label ${1:Label}
+	'''
+	'bs-label-warning':
+		'prefix': 'bs-label-warning'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-lg.btn-danger ${3:button}
+	'''
+	'bs-label':
+		'prefix': 'bs-label'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-lg.btn-default ${3:button}
+	'''
+	'bs-lg-button-danger':
+		'prefix': 'bs-lg-button-danger'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-lg.btn-${3:default}.disabled ${4:button}
+	'''
+	'bs-lg-button-default':
+		'prefix': 'bs-lg-button-default'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-lg.btn-info ${3:button}
+	'''
+	'bs-lg-button-disabled':
+		'prefix': 'bs-lg-button-disabled'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-lg.btn-primary ${3:button}
+	'''
+	'bs-lg-button-info':
+		'prefix': 'bs-lg-button-info'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-lg.btn-success ${3:button}
+	'''
+	'bs-lg-button-primary':
+		'prefix': 'bs-lg-button-primary'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-lg.btn-warning ${3:button}
+	'''
+	'bs-lg-button-success':
+		'prefix': 'bs-lg-button-success'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-lg.btn-default ${3:button}
+	'''
+	'bs-lg-button-warning':
+		'prefix': 'bs-lg-button-warning'
+		'body': '''
+	ul.list-group
+		li.list-group-item
+			span.badge 5
+			| Item 1
+		li.list-group-item
+			span.badge 10
+			| Item 2
+		li.list-group-item
+			span.badge 15
+			| Item 3
+	'''
+	'bs-lg-button':
+		'prefix': 'bs-lg-button'
+		'body': '''
+	.list-group
+		a(href="#").list-group-item.active
+			h4.list-group-item-heading ${1:List group item heading}
+			p.list-group-item-text ${2:Content goes here}
+	'''
+	'bs-list-group-badges':
+		'prefix': 'bs-list-group-badges'
+		'body': '''
+	.list-group
+		a(href="#").list-group-item.active Item 1
+		a(href="#").list-group-item Item 2
+		a(href="#").list-group-item Item 3
+	'''
+	'bs-list-group-content':
+		'prefix': 'bs-list-group-content'
+		'body': '''
+	ul.list-group
+		li.list-group-item Item 1
+		li.list-group-item Item 2
+		li.list-group-item Item 3
+	'''
+	'bs-list-group-linked':
+		'prefix': 'bs-list-group-linked'
+		'body': '''
+	.media
+		a(href="${1:#}").media-left
+			img(${2:data-}src="${3:holder.js/${4:64x64}}", alt="${5}")
+		.media-body
+			h4.media-heading ${6:Media heading}
+			p ${7:Text goes here...}
+	'''
+	'bs-list-group':
+		'prefix': 'bs-list-group'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-xs.btn-danger ${3:button}
+	'''
+	'bs-media-object':
+		'prefix': 'bs-media-object'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-xs.btn-default ${3:button}
+	'''
+	'bs-mini-button-danger':
+		'prefix': 'bs-mini-button-danger'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-xs.btn-${3:default}.disabled ${4:button}
+	'''
+	'bs-mini-button-default':
+		'prefix': 'bs-mini-button-default'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-xs.btn-info ${3:button}
+	'''
+	'bs-mini-button-disabled':
+		'prefix': 'bs-mini-button-disabled'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-xs.btn-primary ${3:button}
+	'''
+	'bs-mini-button-info':
+		'prefix': 'bs-mini-button-info'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-xs.btn-success ${3:button}
+	'''
+	'bs-mini-button-primary':
+		'prefix': 'bs-mini-button-primary'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-xs.btn-warning ${3:button}
+	'''
+	'bs-mini-button-success':
+		'prefix': 'bs-mini-button-success'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-xs.btn-default ${3:button}
+	'''
+	'bs-mini-button-warning':
+		'prefix': 'bs-mini-button-warning'
+		'body': '''
+	${1://a.btn.btn-primary(data-toggle="modal", href="#${2:modal-id}") Trigger modal}
+	#${2:modal-id}.modal.fade
+		.modal-dialog
+			.modal-content
+				.modal-header
+					button.close(type="button", data-dismiss="modal")
+						span(aria-hidden="true") &times;
+						span.sr-only Close
+					h4.modal-title Title
+				.modal-body
+					p body
+				.modal-footer
+					button.btn.btn-default(type="button", data-dismiss="modal") Close
+					button.btn.btn-primary(type="button") Save changes
+	'''
+	'bs-mini-button':
+		'prefix': 'bs-mini-button'
+		'body': '''
+	a(href="${1:/}").navbar-brand ${2:Brand}
+	'''
+	'bs-modal':
+		'prefix': 'bs-modal'
+		'body': '''
+	nav(role="navigation").navbar.navbar-default.navbar-fixed-bottom
+		a(href="${1:#}").navbar-brand ${2:Title}
+		ul.nav.navbar-nav
+			li.active
+				a(href="#") ${3:Home}
+			li
+				a(href="#") ${4:Link}
+	'''
+	'bs-navbar-basic':
+		'prefix': 'bs-navbar-basic'
+		'body': '''
+	nav(role="navigation").navbar.navbar-default.navbar-fixed-top
+		a(href="${1:/}").navbar-brand ${2:Title}
+		ul.nav.navbar-nav
+			li.active
+				a(href="#") ${3:Home}
+			li
+				a(href="#") ${4:Link}
+	'''
+	'bs-navbar-brand':
+		'prefix': 'bs-navbar-brand'
+		'body': '''
+	form.navbar-form.pull-${1:right}
+		input(type="text", style="width: 200px;")
+		button(type="submit").btn.btn-${2:default} ${3:Submit}
+	'''
+	'bs-navbar-fixed-bottom':
+		'prefix': 'bs-navbar-fixed-bottom'
+		'body': '''
+	.navbar
+		a(href="#").navbar-brand ${1:Title}
+		ul.nav.navbar-nav
+			li.active
+				a(href="#") ${2:Home}
+			li
+				a(href="#") ${3:Link}
+	'''
+	'bs-navbar-fixed-top':
+		'prefix': 'bs-navbar-fixed-top'
+		'body': '''
+	nav.navbar.navbar-inverse
+		a(href="#").navbar-brand ${1:Title}
+		ul.nav.navbar-nav
+			li.active
+				a(href="#") ${2:Home}
+			li
+				a(href="#") ${3:Link}
+	'''
+	'bs-navbar-form':
+		'prefix': 'bs-navbar-form'
+		'body': '''
+	ul.nav.navbar-nav
+		li.active
+			a(href="${1:#}") ${2:Home}
+		li
+			a(href="${3:#}") ${4:Link}
+	'''
+	'bs-navbar-inverse':
+		'prefix': 'bs-navbar-inverse'
+		'body': '''
+	p.navbar-text.pull-${1:right}
+		a(href="${2:#}").navbar-link ${3:Links}
+	'''
+	'bs-navbar-link':
+		'prefix': 'bs-navbar-link'
+		'body': '''
+	nav(role="navigation").navbar.navbar-default
+		.navbar-header
+			button(type="button", data-toggle="collapse", data-target=".navbar-ex1-collapse").navbar-toggle.collapsed
+				span.sr-only Toggle navigation
+				span.icon-bar
+				span.icon-bar
+				span.icon-bar
+			a(href="${1:#}").navbar-brand ${2:Title}
+		.collapse.navbar-collapse.navbar-ex1-collapse
+			ul.nav.navbar-nav
+				li.active: a(href="#") Link
+				li: a(href="#") Link
+			form(role="search").navbar-form.navbar-left
+				.form-group
+					input(type="text", placeholder="Search").form-control
+				button(type="submit").btn.btn-default Submit
+			ul.nav.navbar-nav.navbar-right
+				li: a(href="#") Link
+				li.dropdown
+					a.dropdown-toggle(href="#", data-toggle="dropdown", role="button", aria-expanded="false")
+						| Dropdown
+						span.caret
+					ul.dropdown-menu(role="menu")
+						li: a(href="#") Action
+						li: a(href="#") Another action
+						li: a(href="#") Something else here
+						li: a(href="#") Separated link
+	'''
+	'bs-navbar-links':
+		'prefix': 'bs-navbar-links'
+		'body': '''
+	nav(role="navigation").navbar.navbar-default.navbar-static-top
+		a(href="${1:#}").navbar-brand ${2:Title}
+		ul.nav.navbar-nav
+			li.active
+				a(href="#") ${3:Home}
+			li
+				a(href="#") ${4:Link}
+	'''
+	'bs-navbar-responsive':
+		'prefix': 'bs-navbar-responsive'
+		'body': '''
+	p.navbar-text ${1:Navbar text}
+	'''
+	'bs-navbar-static-top':
+		'prefix': 'bs-navbar-static-top'
+		'body': '''
+	nav(role="navigation").navbar.navbar-default
+		.navbar-header
+			button(type="button", data-toggle="collapse", data-target=".navbar-ex1-collapse").navbar-toggle.collapsed
+				span.sr-only Toggle navigation
+				span.icon-bar
+				span.icon-bar
+				span.icon-bar
+			a(href="${1:#}" ).navbar-brand ${2:Title}
+		.collapse.navbar-collapse.navbar-ex1-collapse
+			ul.nav.navbar-nav
+				li.active: a(href="#") Link
+				li: a(href="#") Link
+			form(role="search").navbar-form.navbar-left
+				.form-group
+					input(type="text", placeholder="Search").form-control
+				button(type="submit").btn.btn-default Submit
+			ul.nav.navbar-nav.navbar-right
+				li: a(href="#") Link
+				li.dropdown
+					a.dropdown-toggle(href="#", data-toggle="dropdown",role="button", aria-expanded="false")
+						| Dropdown
+						span.caret
+					ul.dropdown-menu(role="menu")
+						li: a(href="#") Action
+						li: a(href="#") Another action
+						li: a(href="#") Something else here
+						li: a(href="#") Separated link
+	'''
+	'bs-navbar-text':
+		'prefix': 'bs-navbar-text'
+		'body': '''
+	button(type="button").btn.btn-${1:default}.navbar-btn ${2:Button}
+	'''
+	'bs-navbar':
+		'prefix': 'bs-navbar'
+		'body': '''
+	.page-header
+		h1 ${1:title}<small>${2:subtext}</small>
+	'''
+	'bs-navbar_button':
+		'prefix': 'bs-navbar_button'
+		'body': '''
+	nav
+		ul.pager
+			li.previous: a(href="#") &larr; Older
+			li.next: a(href="#") Newer &rarr;
+	'''
+	'bs-page-header':
+		'prefix': 'bs-page-header'
+		'body': '''
+	nav
+		ul.pager
+			li: a(href="#") Previous
+			li: a(href="#") Next
+	'''
+	'bs-pager-aligned':
+		'prefix': 'bs-pager-aligned'
+		'body': '''
+	nav
+		ul.pagination.pagination-lg
+			li: a(href="#") &laquo;
+			li: a(href="#") 1
+			li: a(href="#") 2
+			li: a(href="#") 3
+			li: a(href="#") 4
+			li: a(href="#") 5
+			li: a(href="#") &raquo;
+	'''
+	'bs-pager':
+		'prefix': 'bs-pager'
+		'body': '''
+	nav
+		ul.pagination.pagination-sm
+			li: a(href="#") &laquo;
+			li: a(href="#") 1
+			li: a(href="#") 2
+			li: a(href="#") 3
+			li: a(href="#") 4
+			li: a(href="#") 5
+			li: a(href="#") &raquo;
+	'''
+	'bs-pagination-lg':
+		'prefix': 'bs-pagination-lg'
+		'body': '''
+	nav
+		ul.pagination
+			li: a(href="#") &laquo;
+			li: a(href="#") 1
+			li: a(href="#") 2
+			li: a(href="#") 3
+			li: a(href="#") 4
+			li: a(href="#") 5
+			li: a(href="#") &raquo;
+	'''
+	'bs-pagination-sm':
+		'prefix': 'bs-pagination-sm'
+		'body': '''
+	.panel.panel-${1:danger}
+		.panel-heading
+			h3.panel-title Panel title
+		.panel-body
+			| Panel content
+	'''
+	'bs-pagination':
+		'prefix': 'bs-pagination'
+		'body': '''
+	.alert.alert-danger(role="alert")
+		button.close(type="button", data-dismiss="alert")
+			span(aria-hidden="true") &times;
+			span.sr-only Close
+		strong ${1:Title!}
+		| ${2: Alert body ...}
+	'''
+	'bs-panel-danger':
+		'prefix': 'bs-panel-danger'
+		'body': '''
+	.panel.panel-default
+		.panel-body
+			| Panel content
+		.panel-footer
+			| Panel footer
+	'''
+	'bs-panel-footer':
+		'prefix': 'bs-panel-footer'
+		'body': '''
+	.panel.panel-${1:info}
+		.panel-heading
+			h3.panel-title Panel title
+		.panel-body
+			| Panel content
+	'''
+	'bs-panel-heading':
+		'prefix': 'bs-panel-heading'
+		'body': '''
+	.panel.panel-${1:default}
+		.panel-heading
+			h3.panel-title Panel title
+		.panel-body
+			| Panel content
+	'''
+	'bs-panel-info':
+		'prefix': 'bs-panel-info'
+		'body': '''
+	.panel.panel-${1:primary}
+		.panel-heading
+			h3.panel-title Panel title
+		.panel-body
+			| Panel content
+	'''
+	'bs-panel-primary':
+		'prefix': 'bs-panel-primary'
+		'body': '''
+	.panel.panel-${1:success}
+		.panel-heading
+			h3.panel-title Panel title
+		.panel-body
+			| Panel content
+	'''
+	'bs-panel-success':
+		'prefix': 'bs-panel-success'
+		'body': '''
+	.panel.panel-${1:default}
+		.panel-heading Panel heading
+		.panel-body
+			p Text goes here...
+		table.table
+			thead
+				tr
+					th ${2:Heading 1}
+					th ${3:Heading 2}
+			tbody
+				tr
+					td ${4:Content 1}
+					td ${5:Content 2}
+	'''
+	'bs-panel-table':
+		'prefix': 'bs-panel-table'
+		'body': '''
+	.panel.panel-${1:warning}
+		.panel-heading
+			h3.panel-title Panel title
+		.panel-body
+			| Panel content
+	'''
+	'bs-panel-warning':
+		'prefix': 'bs-panel-warning'
+		'body': '''
+	.panel.panel-${1:default}
+		.panel-body
+			| Basic panel example
+	'''
+	'bs-panel':
+		'prefix': 'bs-panel'
+		'body': '''
+		.progress
+			.progress-bar(role="progressbar", aria-valuenow="60", aria-valuemin="0", aria-valuemax="1003, style="width: 60%;")
+				span.sr-only 60% Complete
+	'''
+	'bs-progress':
+		'prefix': 'bs-progress'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-sm.btn-danger ${3:button}
+	'''
+	'bs-sm-button-danger':
+		'prefix': 'bs-sm-button-danger'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-sm.btn-default ${3:button}
+	'''
+	'bs-sm-button-default':
+		'prefix': 'bs-sm-button-default'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-sm.btn-${3:default}.disabled ${4:button}
+	'''
+	'bs-sm-button-disabled':
+		'prefix': 'bs-sm-button-disabled'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-sm.btn-info ${3:button}
+	'''
+	'bs-sm-button-info':
+		'prefix': 'bs-sm-button-info'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-sm.btn-primary ${3:button}
+	'''
+	'bs-sm-button-primary':
+		'prefix': 'bs-sm-button-primary'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-sm.btn-success ${3:button}
+	'''
+	'bs-sm-button-success':
+		'prefix': 'bs-sm-button-success'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-sm.btn-warning ${3:button}
+	'''
+	'bs-sm-button-warning':
+		'prefix': 'bs-sm-button-warning'
+		'body': '''
+	button${1:(type="${2:button}")}.btn.btn-sm.btn-default ${3:button}
+	'''
+	'bs-sm-button':
+		'prefix': 'bs-sm-button'
+		'body': '''
+	table.table.table-bordered${1:.table-hover}
+		thead
+			tr
+				th
+		tbody
+			tr
+				td
+	'''
+	'bs-table-bordered':
+		'prefix': 'bs-table-bordered'
+		'body': '''
+	table.table.table-condensed${1:.table-hover}
+		thead
+			tr
+				th
+		tbody
+			tr
+				td
+	'''
+	'bs-table-condensed':
+		'prefix': 'bs-table-condensed'
+		'body': '''
+	table.table.table-hover
+		thead
+			tr
+				th
+		tbody
+			tr
+				td
+	'''
+	'bs-table-hover':
+		'prefix': 'bs-table-hover'
+		'body': '''
+	.table-responsive
+		table.table${1:.table-hover}
+			thead
+				tr
+					th
+			tbody
+				tr
+					td
+	'''
+	'bs-table-responsive':
+		'prefix': 'bs-table-responsive'
+		'body': '''
+	table.table.table-striped${1:.table-hover}
+		thead
+			tr
+				th
+		tbody
+			tr
+				td
+	'''
+	'bs-table-striped':
+		'prefix': 'bs-table-striped'
+		'body': '''
+	table.table${1:.table-hover}
+		thead
+			tr
+				th
+		tbody
+			tr
+				td
+	'''
+	'bs-table':
+		'prefix': 'bs-table'
+		'body': '''
+	.col-xs-${1:3}.col-sm-${1:3}.col-md-${1:3}.col-lg-${1:3}
+		.thumbnail
+			img(${2:data-}src="${3:holder.js/${4:100x200}/${5:#999:#fff}/${6:text:${7:hello world}}}", alt="${8}")${9:.img-responsive}
+			.caption
+				h3 ${10:Title}
+				p ${11:...}
+				p
+					a(href="${12:#}").btn.btn-primary ${13:Action}
+					a(href="${14:#}").btn.btn-default ${15:Action}
+	'''
+	'bs-thumbnail-content':
+		'prefix': 'bs-thumbnail-content'
+		'body': '''
+	.col-xs-${1:3}.col-sm-${1:3}.col-md-${1:3}.col-lg-${1:3}
+		a(href="${2:#}").thumbnail
+			img(${3:data-}src="${4:holder.js/${5:200x200}/${6:#999:#fff}/${7:text:${8:hello world}}}", alt="${9}")${10:.img-responsive}
+	'''
+	'bs-thumbnail':
+		'prefix': 'bs-thumbnail'
+		'body': '''
+	extend layout
+
+	block append css
+		style.
+			/*
+			* Globals
+			*/
+
+			body {
+				font-family: Georgia, "Times New Roman", Times, serif;
+				color: #555;
+			}
+
+			h1, .h1,
+			h2, .h2,
+			h3, .h3,
+			h4, .h4,
+			h5, .h5,
+			h6, .h6 {
+				margin-top: 0;
+				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+				font-weight: normal;
+				color: #333;
+			}
+
+
+			/*
+			* Override Bootstrap's default container.
+			*/
+
+			@media (min-width: 1200px) {
+				.container {
+					width: 970px;
+				}
+			}
+
+
+			/*
+			* Masthead for nav
+			*/
+
+			.blog-masthead {
+				background-color: #428bca;
+				box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+			}
+
+			/* Nav links */
+			.blog-nav-item {
+				position: relative;
+				display: inline-block;
+				padding: 10px;
+				font-weight: 500;
+				color: #cdddeb;
+			}
+			.blog-nav-item:hover,
+			.blog-nav-item:focus {
+				color: #fff;
+				text-decoration: none;
+			}
+
+			/* Active state gets a caret at the bottom */
+			.blog-nav .active {
+				color: #fff;
+			}
+			.blog-nav .active:after {
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				width: 0;
+				height: 0;
+				margin-left: -5px;
+				vertical-align: middle;
+				content: " ";
+				border-right:  5px solid transparent;
+				border-bottom: 5px solid;
+				border-left:   5px solid transparent;
+			}
+
+
+			/*
+			* Blog name and description
+			*/
+
+			.blog-header {
+				padding-top: 20px;
+				padding-bottom: 20px;
+			}
+			.blog-title {
+				margin-top: 30px;
+				margin-bottom: 0;
+				font-size: 60px;
+				font-weight: normal;
+			}
+			.blog-description {
+				font-size: 20px;
+				color: #999;
+			}
+
+
+			/*
+			* Main column and sidebar layout
+			*/
+
+			.blog-main {
+				font-size: 18px;
+				line-height: 1.5;
+			}
+
+			/* Sidebar modules for boxing content */
+			.sidebar-module {
+				padding: 15px;
+				margin: 0 -15px 15px;
+			}
+			.sidebar-module-inset {
+				padding: 15px;
+				background-color: #f5f5f5;
+				border-radius: 4px;
+			}
+			.sidebar-module-inset p:last-child,
+			.sidebar-module-inset ul:last-child,
+			.sidebar-module-inset ol:last-child {
+				margin-bottom: 0;
+			}
+
+
+
+			/* Pagination */
+			.pager {
+				margin-bottom: 60px;
+				text-align: left;
+			}
+			.pager > li > a {
+				width: 140px;
+				padding: 10px 20px;
+				text-align: center;
+				border-radius: 30px;
+			}
+
+
+			/*
+			* Blog posts
+			*/
+
+			.blog-post {
+				margin-bottom: 60px;
+			}
+			.blog-post-title {
+				margin-bottom: 5px;
+				font-size: 40px;
+			}
+			.blog-post-meta {
+				margin-bottom: 20px;
+				color: #999;
+			}
+
+
+			/*
+			* Footer
+			*/
+
+			.blog-footer {
+				padding: 40px 0;
+				color: #999;
+				text-align: center;
+				background-color: #f9f9f9;
+				border-top: 1px solid #e5e5e5;
+			}
+	block main
+		.blog-masthead
+			.container
+				nav.blog-nav
+					a.blog-nav-item.active(href="#") Home
+					a.blog-nav-item(href="#") New features
+					a.blog-nav-item(href="#") Press
+					a.blog-nav-item(href="#") New hires
+					a.blog-nav-item(href="#") About
+		.container
+			.blog-header
+				h1.blog-title The Bootstrap Blog
+				p.lead.blog-description The official example template of creating a blog with Bootstrap.
+			.row
+				.col-sm-8.blog-main
+					.blog-post
+						h2.blog-post-title Sample blog post
+						p.blog-post-meta
+							| January 1, 2014 by
+							a(href="#") Mark
+						p
+							| This blog post shows a few different types of content that's supported and styled with Bootstrap. Basic typography, images, and code are all supported.
+						hr
+						p
+							| Cum sociis natoque penatibus et magnis
+							a(href="#") dis parturient montes
+							| , nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.
+						blockquote
+							p
+								| Curabitur blandit tempus porttitor.
+								strong Nullam quis risus eget urna mollis
+								| ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.
+						p
+							| Etiam porta
+							em sem malesuada magna
+							| mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.
+						h2 Heading
+						p
+							| Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+						h3 Sub-heading
+						p
+							| Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+						pre.
+
+						p
+							| Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.
+						h3 Sub-heading
+						p
+							| Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+						ul
+							li Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+							li Donec id elit non mi porta gravida at eget metus.
+							li Nulla vitae elit libero, a pharetra augue.
+						p
+							| Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.
+						ol
+							li Vestibulum id ligula porta felis euismod semper.
+							li
+								| Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+							li Maecenas sed diam eget risus varius blandit sit amet non magna.
+						p
+							| Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.
+					//
+						/.blog-post
+					.blog-post
+						h2.blog-post-title Another blog post
+						p.blog-post-meta
+							| December 23, 2013 by
+							a(href="#") Jacob
+						p
+							| Cum sociis natoque penatibus et magnis
+							a(href="#") dis parturient montes
+							| , nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.
+						blockquote
+							p
+								| Curabitur blandit tempus porttitor.
+								strong Nullam quis risus eget urna mollis
+								| ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.
+						p
+							| Etiam porta
+							em sem malesuada magna
+							| mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.
+						p
+							| Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+					//
+						/.blog-post
+					.blog-post
+						h2.blog-post-title New feature
+						p.blog-post-meta
+							| December 14, 2013 by
+							a(href="#") Chris
+						p
+							| Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+						ul
+							li Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+							li Donec id elit non mi porta gravida at eget metus.
+							li Nulla vitae elit libero, a pharetra augue.
+						p
+							| Etiam porta
+							em sem malesuada magna
+							| mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.
+						p
+							| Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.
+					//
+						/.blog-post
+					nav
+						ul.pager
+							li
+								a(href="#") Previous
+							li
+								a(href="#") Next
+				//
+					/.blog-main
+				.col-sm-3.col-sm-offset-1.blog-sidebar
+					.sidebar-module.sidebar-module-inset
+						h4 About
+						p
+							| Etiam porta
+							em sem malesuada magna
+							| mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.
+					.sidebar-module
+						h4 Archives
+						ol.list-unstyled
+							li
+								a(href="#") January 2014
+							li
+								a(href="#") December 2013
+							li
+								a(href="#") November 2013
+							li
+								a(href="#") October 2013
+							li
+								a(href="#") September 2013
+							li
+								a(href="#") August 2013
+							li
+								a(href="#") July 2013
+							li
+								a(href="#") June 2013
+							li
+								a(href="#") May 2013
+							li
+								a(href="#") April 2013
+							li
+								a(href="#") March 2013
+							li
+								a(href="#") February 2013
+					.sidebar-module
+						h4 Elsewhere
+						ol.list-unstyled
+							li
+								a(href="#") GitHub
+							li
+								a(href="#") Twitter
+							li
+								a(href="#") Facebook
+				//
+					/.blog-sidebar
+			//
+				/.row
+		//
+			/.container
+		footer.blog-footer
+			p
+				| Blog template built for
+				a(href="http://getbootstrap.com") Bootstrap
+				| by
+				a(href="https://twitter.com/mdo") @mdo
+				| .
+			p
+				a(href="#") Back to top
+	'''
+	'bs-tpl-blog':
+		'prefix': 'bs-tpl-blog'
+		'body': '''
+	extend layout
+
+	block append css
+		style.
+			/* GLOBAL STYLES
+			-------------------------------------------------- */
+			/* Padding below the footer and lighter body text */
+
+			body {
+				padding-bottom: 40px;
+				color: #5a5a5a;
+			}
+
+			/* CUSTOMIZE THE NAVBAR
+			-------------------------------------------------- */
+
+			/* Special class on .container surrounding .navbar, used for positioning it into place. */
+			.navbar-wrapper {
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					z-index: 20;
+			}
+
+			/* Flip around the padding for proper display in narrow viewports */
+			.navbar-wrapper .container {
+				padding-left: 0;
+				padding-right: 0;
+			}
+			.navbar-wrapper .navbar {
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+
+
+			/* CUSTOMIZE THE CAROUSEL
+			-------------------------------------------------- */
+
+			/* Carousel base class */
+			.carousel {
+					height: 500px;
+					margin-bottom: 60px;
+			}
+			/* Since positioning the image, we need to help out the caption */
+			.carousel-caption {
+					z-index: 10;
+			}
+
+			/* Declare heights because of positioning of img element */
+			.carousel .item {
+					height: 500px;
+					background-color: #777;
+			}
+			.carousel-inner > .item > img {
+					position: absolute;
+					top: 0;
+					left: 0;
+					min-width: 100%;
+					height: 500px;
+			}
+
+
+
+			/* MARKETING CONTENT
+			-------------------------------------------------- */
+
+			/* Pad the edges of the mobile views a bit */
+			.marketing {
+					padding-left: 15px;
+					padding-right: 15px;
+			}
+
+			/* Center align the text within the three columns below the carousel */
+			.marketing .col-lg-4 {
+					text-align: center;
+					margin-bottom: 20px;
+			}
+			.marketing h2 {
+					font-weight: normal;
+			}
+			.marketing .col-lg-4 p {
+					margin-left: 10px;
+					margin-right: 10px;
+			}
+
+
+			/* Featurettes
+			------------------------- */
+
+			.featurette-divider {
+					margin: 80px 0; /* Space out the Bootstrap <hr> more */
+			}
+
+			/* Thin out the marketing headings */
+			.featurette-heading {
+					font-weight: 300;
+					line-height: 1;
+					letter-spacing: -1px;
+			}
+
+
+
+			/* RESPONSIVE CSS
+			-------------------------------------------------- */
+
+			@media (min-width: 768px) {
+
+				/* Remove the edge padding needed for mobile */
+				.marketing {
+					padding-left: 0;
+					padding-right: 0;
+				}
+
+				/* Navbar positioning foo */
+				.navbar-wrapper {
+					margin-top: 20px;
+				}
+
+				.navbar-wrapper .container {
+					padding-left:  15px;
+					padding-right: 15px;
+				}
+				.navbar-wrapper .navbar {
+					padding-left:  0;
+					padding-right: 0;
+				}
+
+				/* The navbar becomes detached from the top, so we round the corners */
+				.navbar-wrapper .navbar {
+					border-radius: 4px;
+				}
+
+				/* Bump up size of carousel content */
+				.carousel-caption p {
+					margin-bottom: 20px;
+					font-size: 21px;
+					line-height: 1.4;
+				}
+
+				.featurette-heading {
+					font-size: 50px;
+				}
+
+			}
+
+			@media (min-width: 992px) {
+				.featurette-heading {
+					margin-top: 120px;
+				}
+			}
+
+	block main
+		.navbar-wrapper
+		.container
+			nav.navbar.navbar-inverse.navbar-static-top
+				.container
+					.navbar-header
+						button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target=".navbar-collapse")
+							span.sr-only Toggle Navigation
+							span.icon-bar
+							span.icon-bar
+							span.icon-bar
+						a.navbar-brand(href="#") Project name
+					.navbar-collapse.collapse
+						ul.nav.navbar-nav
+							li.active
+								a(href="#") Home
+							li
+								a(href="#about") About
+							li
+								a(href="#contact") Contact
+							li.dropdown
+								a.dropdown-toggle(href="#", data-toggle="dropdown",role="button", aria-expanded="false")
+									| Dropdown
+									span.caret
+								ul.dropdown-menu(role="menu")
+									li
+										a(href="#") Action
+									li
+										a(href="#") Another action
+									li
+										a(href="#") Something else here
+									li.divider
+									li.dropdown-header Nav header
+									li
+										a(href="#") Separated link
+									li
+										a(href="#") One more separated link
+		//  Carousel
+		#myCarousel.carousel.slide(data-ride="carousel")
+			// Indicators
+			ol.carousel-indicators
+				li.active(data-target="#myCarousel", data-slide-to="0")
+				li(data-target="#myCarousel", data-slide-to="1")
+				li(data-target="#myCarousel", data-slide-to="2")
+			.carousel-inner
+				.item.active
+					img(data-src="holder.js/100%x500/auto/#777:#7a7a7a/text:First slide", alt="First slide")
+					.container
+						.carousel-caption
+							h1 Example headline.
+							p
+								| Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+							p
+								a.btn.btn-large.btn-primary(href="#", role="button") Sign up today
+				.item
+					img(data-src="holder.js/100%x500/auto/#777:#7a7a7a/text:First slide", alt="Second slide")
+					.container
+						.carousel-caption
+							h1 Another example headline.
+							p
+								| Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+							p
+								a.btn.btn-large.btn-primary(href="#", role="button") Learn more
+				.item
+					img(data-src="holder.js/100%x500/auto/#777:#7a7a7a/text:First slide", alt="Third slide")
+					.container
+						.carousel-caption
+							h1 One more for good measure.
+							p
+								| Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+							p
+								a.btn.btn-large.btn-primary(href="#", role="button") Browse gallery
+			a.left.carousel-control(href="#myCarousel", data-slide="prev")
+				span.glyphicon.glyphicon-chevron-left(aria-hidden="true")
+				span.sr-only previous
+			a.right.carousel-control(href="#myCarousel", data-slide="next")
+				span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
+				span.sr-only next
+			// /.carousel
+		//
+			Marketing messaging and featurettes
+
+		// Wrap the rest of the page in another container to center all the content.
+		.container.marketing
+
+			// Three columns of text below the carousel
+			.row
+				.col-lg-4
+					img.img-circle(data-src="holder.js/140x140", alt="Generic placeholder image")
+					h2 Heading
+					p
+						| Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.
+					p
+						a.btn.btn-default(href="#", role="button") View details »
+				// /.col-lg-4
+
+				.col-lg-4
+					img.img-circle(data-src="holder.js/140x140", alt="Generic placeholder image")
+					h2 Heading
+					p
+						| Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+					p
+						a.btn.btn-default(href="#", role="button") View details »
+				// /.col-lg-4
+
+				.col-lg-4
+					img.img-circle(data-src="holder.js/140x140", alt="Generic placeholder image")
+					h2 Heading
+					p
+						| Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+					p
+						a.btn.btn-default(href="#", role="button") View details »
+				// /.col-lg-4
+			// /.row
+
+			// START THE FEATURETTES
+			hr.featurette-divider
+			.row.featurette
+				.col-md-7
+					h2.featurette-heading
+						| First featurette heading.
+						span.text-muted  It'll blow your mind.
+					p.lead
+						| Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+				.col-md-5
+					img.featurette-image.img-responsive(data-src="holder.js/500x500/auto", alt="Generic placeholder image")
+			hr.featurette-divider
+			.row.featurette
+				.col-md-5
+					img.featurette-image.img-responsive(data-src="holder.js/500x500/auto", alt="Generic placeholder image")
+				.col-md-7
+					h2.featurette-heading
+						| Oh yeah, it's that good.
+						span.text-muted  See for yourself.
+					p.lead
+						| Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+			hr.featurette-divider
+			.row.featurette
+				.col-md-7
+					h2.featurette-heading
+						| And lastly, this one.
+						span.text-muted  Checkmate.
+					p.lead
+						| Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+				.col-md-5
+					img.featurette-image.img-responsive(data-src="holder.js/500x500/auto", alt="Generic placeholder image")
+			hr.featurette-divider
+			// /END THE FEATURETTES
+
+			// FOOTER
+			footer.footer
+				p.pull-right
+					a(href="#") Back to top
+				p
+					| © 2013 Company, Inc. ·
+					a(href="#") Privacy
+					| ·
+					a(href="#") Terms
+	'''
+	'bs-tpl-carousel':
+		'prefix': 'bs-tpl-carousel'
+		'body': '''
+	extend layout
+
+	block append css
+		style.
+			/*
+			* Globals
+			*/
+
+			/* Links */
+			a,
+			a:focus,
+			a:hover {
+				color: #fff;
+			}
+
+			/* Custom default button */
+			.btn-default,
+			.btn-default:hover,
+			.btn-default:focus {
+				color: #333;
+				text-shadow: none; /* Prevent inheritence from `body` */
+				background-color: #fff;
+				border: 1px solid #fff;
+			}
+
+			/*
+			* Base structure
+			*/
+
+			html,
+			body {
+				height: 100%;
+				background-color: #333;
+			}
+			body {
+				color: #fff;
+				text-align: center;
+				text-shadow: 0 1px 3px rgba(0,0,0,.5);
+				box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+			}
+
+			/* Extra markup and styles for table-esque vertical and horizontal centering */
+			.site-wrapper {
+				display: table;
+				width: 100%;
+				height: 100%; /* For at least Firefox */
+				min-height: 100%;
+			}
+			.site-wrapper-inner {
+				display: table-cell;
+				vertical-align: top;
+			}
+			.cover-container {
+				margin-right: auto;
+				margin-left: auto;
+			}
+
+			/* Padding for spacing */
+			.inner {
+				padding: 30px;
+			}
+
+
+			/*
+			* Header
+			*/
+			.masthead-brand {
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+
+			.masthead-nav > li {
+				display: inline-block;
+			}
+			.masthead-nav > li + li {
+				margin-left: 20px;
+			}
+			.masthead-nav > li > a {
+				padding-right: 0;
+				padding-left: 0;
+				font-size: 16px;
+				font-weight: bold;
+				color: #fff; /* IE8 proofing */
+				color: rgba(255,255,255,.75);
+				border-bottom: 2px solid transparent;
+			}
+			.masthead-nav > li > a:hover,
+			.masthead-nav > li > a:focus {
+				background-color: transparent;
+				border-bottom-color: rgba(255,255,255,.25);
+			}
+			.masthead-nav > .active > a,
+			.masthead-nav > .active > a:hover,
+			.masthead-nav > .active > a:focus {
+				color: #fff;
+				border-bottom-color: #fff;
+			}
+
+			@media (min-width: 768px) {
+				.masthead-brand {
+					float: left;
+				}
+				.masthead-nav {
+					float: right;
+				}
+			}
+
+
+			/*
+			* Cover
+			*/
+
+			.cover {
+				padding: 0 20px;
+			}
+			.cover .btn-lg {
+				padding: 10px 20px;
+				font-weight: bold;
+			}
+
+
+			/*
+			* Footer
+			*/
+
+			.mastfoot {
+				color: #999; /* IE8 proofing */
+				color: rgba(255,255,255,.5);
+			}
+
+
+			/*
+			* Affix and center
+			*/
+
+			@media (min-width: 768px) {
+				/* Pull out the header and footer */
+				.masthead {
+					position: fixed;
+					top: 0;
+				}
+				.mastfoot {
+					position: fixed;
+					bottom: 0;
+				}
+				/* Start the vertical centering */
+				.site-wrapper-inner {
+					vertical-align: middle;
+				}
+				/* Handle the widths */
+				.masthead,
+				.mastfoot,
+				.cover-container {
+					width: 100%; /* Must be percentage or pixels for horizontal alignment */
+				}
+			}
+
+			@media (min-width: 992px) {
+				.masthead,
+				.mastfoot,
+				.cover-container {
+					width: 700px;
+				}
+			}
+
+	block main
+		.site-wrapper
+			.site-wrapper-inner
+				.cover-container
+					.masthead.clearfix
+						.inner
+							h3.masthead-brand Cover
+							nav
+								ul.nav.masthead-nav
+									li.active
+										a(href="#") Home
+									li
+										a(href="#") Features
+									li
+										a(href="#") Contact
+					.inner.cover
+						h1.cover-heading Cover your page.
+						p.lead
+							| Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.
+						p.lead
+							a.btn.btn-lg.btn-default(href="#") Learn more
+					footer.mastfoot
+						.inner
+							p
+							| Cover template for
+							a(href="http://getbootstrap.com") Bootstrap
+							| , by
+							a(href="https://twitter.com/mdo") @mdo
+							| .
+
+	'''
+	'bs-tpl-cover':
+		'prefix': 'bs-tpl-cover'
+		'body': '''
+	extend layout
+
+	block append css
+		style.
+			/*
+			* Base structure
+			*/
+
+			/* Move down content because we have a fixed navbar that is 50px tall */
+			body {
+				padding-top: 50px;
+			}
+
+
+			/*
+			* Global add-ons
+			*/
+
+			.sub-header {
+				padding-bottom: 10px;
+				border-bottom: 1px solid #eee;
+			}
+
+
+			/*
+			* Sidebar
+			*/
+
+			/* Hide for mobile, show later */
+			.sidebar {
+				display: none;
+			}
+			@media (min-width: 768px) {
+				.sidebar {
+					position: fixed;
+					top: 51px;
+					bottom: 0;
+					left: 0;
+					z-index: 1000;
+					display: block;
+					padding: 20px;
+					overflow-x: hidden;
+					overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+					background-color: #f5f5f5;
+					border-right: 1px solid #eee;
+				}
+			}
+
+			/* Sidebar navigation */
+			.nav-sidebar {
+				margin-right: -21px; /* 20px padding + 1px border */
+				margin-bottom: 20px;
+				margin-left: -20px;
+			}
+			.nav-sidebar > li > a {
+				padding-right: 20px;
+				padding-left: 20px;
+			}
+			.nav-sidebar > .active > a {
+				color: #fff;
+				background-color: #428bca;
+			}
+
+
+			/*
+			* Main content
+			*/
+
+			.main {
+				padding: 20px;
+			}
+			@media (min-width: 768px) {
+				.main {
+					padding-right: 40px;
+					padding-left: 40px;
+				}
+			}
+			.main .page-header {
+				margin-top: 0;
+			}
+
+
+			/*
+			* Placeholder dashboard ideas
+			*/
+
+			.placeholders {
+				margin-bottom: 30px;
+				text-align: center;
+			}
+			.placeholders h4 {
+				margin-bottom: 0;
+			}
+			.placeholder {
+				margin-bottom: 20px;
+			}
+			.placeholder img {
+				display: inline-block;
+				border-radius: 50%;
+			}
+
+	block main
+		nav.navbar.navbar-inverse.navbar-fixed-top
+			.container-fluid
+				.navbar-header
+					button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target=".navbar-collapse")
+						span.sr-only Toggle navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.navbar-brand(href="#") Project name
+				.navbar-collapse.collapse
+					ul.nav.navbar-nav.navbar-right
+						li
+							a(href="#") Dashboard
+						li
+							a(href="#") Settings
+						li
+							a(href="#") Profile
+						li
+							a(href="#") Help
+					form.navbar-form.navbar-right
+						input.form-control(type="text", placeholder="Search...")
+		.container-fluid
+			.row
+				.col-sm-3.col-md-2.sidebar
+					ul.nav.nav-sidebar
+						li.active
+							a(href="#")
+								| Overview
+								span.sr-only (current)
+						li
+							a(href="#") Reports
+						li
+							a(href="#") Analytics
+						li
+							a(href="#") Export
+					ul.nav.nav-sidebar
+						li
+							a(href="") Nav item
+						li
+							a(href="") Nav item again
+						li
+							a(href="") One more nav
+						li
+							a(href="") Another nav item
+						li
+							a(href="") More navigation
+					ul.nav.nav-sidebar
+						li
+							a(href="") Nav item again
+						li
+							a(href="") One more nav
+						li
+							a(href="") Another nav item
+				.col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
+					h1.page-header Dashboard
+					.row.placeholders
+						.col-xs-6.col-sm-3.placeholder
+							img.img-responsive(data-src="holder.js/200x200/auto/sky", alt="Generic placeholder thumbnail")
+							h4 Label
+							span.text-muted Something else
+						.col-xs-6.col-sm-3.placeholder
+							img.img-responsive(data-src="holder.js/200x200/auto/vine", alt="Generic placeholder thumbnail")
+							h4 Label
+							span.text-muted Something else
+						.col-xs-6.col-sm-3.placeholder
+							img.img-responsive(data-src="holder.js/200x200/auto/sky", alt="Generic placeholder thumbnail")
+							h4 Label
+							span.text-muted Something else
+						.col-xs-6.col-sm-3.placeholder
+							img.img-responsive(data-src="holder.js/200x200/auto/vine", alt="Generic placeholder thumbnail")
+							h4 Label
+							span.text-muted Something else
+					h2.sub-header Section title
+					.table-responsive
+						table.table.table-striped
+							thead
+								tr
+									th &num;
+									th Header
+									th Header
+									th Header
+									th Header
+							tbody
+								tr
+									td 1&comma;001
+									td Lorem
+									td ipsum
+									td dolor
+									td sit
+								tr
+									td 1&comma;002
+									td amet
+									td consectetur
+									td adipiscing
+									td elit
+								tr
+									td 1&comma;003
+									td Integer
+									td nec
+									td odio
+									td Praesent
+								tr
+									td 1&comma;003
+									td libero
+									td Sed
+									td cursus
+									td ante
+								tr
+									td 1&comma;004
+									td dapibus
+									td diam
+									td Sed
+									td nisi
+								tr
+									td 1&comma;005
+									td Nulla
+									td quis
+									td sem
+									td at
+								tr
+									td 1&comma;006
+									td nibh
+									td elementum
+									td imperdiet
+									td Duis
+								tr
+									td 1&comma;007
+									td sagittis
+									td ipsum
+									td Praesent
+									td mauris
+								tr
+									td 1&comma;008
+									td Fusce
+									td nec
+									td tellus
+									td sed
+								tr
+									td 1&comma;009
+									td augue
+									td semper
+									td porta
+									td Mauris
+								tr
+									td 1&comma;010
+									td massa
+									td Vestibulum
+									td lacinia
+									td arcu
+								tr
+									td 1&comma;011
+									td eget
+									td nulla
+									td Class
+									td aptent
+								tr
+									td 1&comma;012
+									td taciti
+									td sociosqu
+									td ad
+									td litora
+								tr
+									td 1&comma;013
+									td torquent
+									td per
+									td conubia
+									td nostra
+								tr
+									td 1&comma;014
+									td per
+									td inceptos
+									td himenaeos
+									td Curabitur
+								tr
+									td 1&comma;015
+									td sodales
+									td ligula
+									td in
+									td libero
+	'''
+	'bs-tpl-dashboard':
+		'prefix': 'bs-tpl-dashboard'
+		'body': '''
+	extend layout
+
+	block append css
+		style.
+			.container {
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+
+			h4 {
+				margin-top: 25px;
+			}
+			.row {
+				margin-bottom: 20px;
+			}
+			.row .row {
+				margin-top: 10px;
+				margin-bottom: 0;
+			}
+			[class*="col-"] {
+				padding-top: 15px;
+				padding-bottom: 15px;
+				background-color: #eee;
+				border: 1px solid #ddd;
+				background-color: rgba(86,61,124,.15);
+				border: 1px solid rgba(86,61,124,.2);
+			}
+
+			hr {
+				margin-top: 40px;
+				margin-bottom: 40px;
+			}
+
+	block main
+		.container
+			.page-header
+				h1 Bootstrap grid examples
+				p.lead
+				| Basic grid layouts to get you familiar with building within the Bootstrap grid system.
+			h3 Three equal columns
+			p
+				| Get three equal-width columns
+				strong starting at desktops and scaling to large desktops
+				| . On mobile devices, tablets and below, the columns will automatically stack.
+			.row
+				.col-md-4 .col-md-4
+				.col-md-4 .col-md-4
+				.col-md-4 .col-md-4
+			h3 Three unequal columns
+			p
+				| Get three columns
+				strong starting at desktops and scaling to large desktops
+				| of various widths. Remember, grid columns should add up to twelve for a single horizontal block. More than that, and columns start stacking no matter the viewport.
+			.row
+				.col-md-3 .col-md-3
+				.col-md-6 .col-md-6
+				.col-md-3 .col-md-3
+			h3 Two columns
+			p
+				| Get two columns
+				strong starting at desktops and scaling to large desktops
+				| .
+			.row
+				.col-md-8 .col-md-8
+				.col-md-4 .col-md-4
+			h3 Full width, single column
+			p.text-warning No grid classes are necessary for full-width elements.
+			hr
+			h3 Two columns with two nested columns
+			p
+				| Per the documentation, nesting is easy—just put a row of columns within an existing row. This gives you two columns
+				strong starting at desktops and scaling to large desktops
+				| , with another two (equal widths) within the larger column.
+			p
+				| At mobile device sizes, tablets and down, these columns and their nested columns will stack.
+			.row
+				.col-md-8
+					| .col-md-8
+					.row
+						.col-md-6 .col-md-6
+						.col-md-6 .col-md-6
+				.col-md-4 .col-md-4
+			hr
+			h3 Mixed: mobile and desktop
+			p
+				| The Bootstrap 3 grid system has four tiers of classes: xs (phones), sm (tablets), md (desktops), and lg (larger desktops). You can use nearly any combination of these classes to create more dynamic and flexible layouts.
+			p
+				| Each tier of classes scales up, meaning if you plan on setting the same widths for xs and sm, you only need to specify xs.
+			.row
+				.col-xs-12.col-md-8 .col-xs-12 .col-md-8
+				.col-xs-6.col-md-4 .col-xs-6 .col-md-4
+			.row
+				.col-xs-6.col-md-4 .col-xs-6 .col-md-4
+				.col-xs-6.col-md-4 .col-xs-6 .col-md-4
+				.col-xs-6.col-md-4 .col-xs-6 .col-md-4
+			.row
+				.col-xs-6.col-md-6 .col-xs-6 .col-md-6
+				.col-xs-6.col-md-6 .col-xs-6 .col-md-6
+			hr
+			h3 Mixed: mobile, tablet, and desktop
+			p
+			.row
+				.col-xs-12.col-sm-8.col-lg-8 .col-xs-12 .col-lg-8
+				.col-xs-6.col-sm-4.col-lg-4 .col-xs-6 .col-lg-4
+			.row
+				.col-xs-6.col-sm-4.col-lg-4 .col-xs-6 .col-sm-4 .col-lg-4
+				.col-xs-6.col-sm-4.col-lg-4 .col-xs-6 .col-sm-4 .col-lg-4
+				.col-xs-6.col-sm-4.col-lg-4 .col-xs-6 .col-sm-4 .col-lg-4
+			.row
+				.col-xs-6.col-sm-6.col-lg-6 .col-xs-6 .col-sm-6 .col-lg-6
+				.col-xs-6.col-sm-6.col-lg-6 .col-xs-6 .col-sm-6 .col-lg-6
+	'''
+	'bs-tpl-grid':
+		'prefix': 'bs-tpl-grid'
+		'body': '''
+	extend layout
+
+	append css
+		style.
+			/* Space out content a bit */
+			body {
+				padding-top: 20px;
+				padding-bottom: 20px;
+			}
+
+			/* Everything but the jumbotron gets side spacing for mobile first views */
+			.header,
+			.marketing,
+			.footer {
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+
+			/* Custom page header */
+			.header {
+				border-bottom: 1px solid #e5e5e5;
+			}
+			/* Make the masthead heading the same height as the navigation */
+			.header h3 {
+				margin-top: 0;
+				margin-bottom: 0;
+				line-height: 40px;
+				padding-bottom: 19px;
+			}
+
+			/* Custom page footer */
+			.footer {
+				padding-top: 19px;
+				color: #777;
+				border-top: 1px solid #e5e5e5;
+			}
+
+			/* Customize container */
+			@media (min-width: 768px) {
+				.container {
+					max-width: 730px;
+				}
+			}
+			.container-narrow > hr {
+				margin: 30px 0;
+			}
+
+			/* Main marketing message and sign up button */
+			.jumbotron {
+				text-align: center;
+				border-bottom: 1px solid #e5e5e5;
+			}
+			.jumbotron .btn {
+				font-size: 21px;
+				padding: 14px 24px;
+			}
+
+			/* Supporting marketing content */
+			.marketing {
+				margin: 40px 0;
+			}
+			.marketing p + h4 {
+				margin-top: 28px;
+			}
+
+			/* Responsive: Portrait tablets and up */
+			@media screen and (min-width: 768px) {
+				/* Remove the padding we set earlier */
+				.header,
+				.marketing,
+				.footer {
+					padding-left: 0;
+					padding-right: 0;
+				}
+				/* Space out the masthead */
+				.header {
+					margin-bottom: 30px;
+				}
+				/* Remove the bottom border on the jumbotron for visual effect */
+				.jumbotron {
+					border-bottom: 0;
+				}
+			}
+
+	block main
+			.container
+				.header
+					nav
+						ul.nav.nav-pills.pull-right(role="tablist")
+							li.active(role="presentation")
+								a(href="#") Home
+							li(role="presentation")
+								a(href="#") About
+							li(role="presentation")
+								a(href="#") Contact
+					h3.text-muted Project name
+				.jumbotron
+					h1 Jumbotron heading
+					p.lead
+						| Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+					p
+						a.btn.btn-lg.btn-success(href="#", role="button") Sign up today
+				.row.marketing
+					.col-lg-6
+						h4 Subheading
+						p
+							| Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
+						h4 Subheading
+						p
+							| Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.
+						h4 Subheading
+						p Maecenas sed diam eget risus varius blandit sit amet non magna.
+					.col-lg-6
+						h4 Subheading
+						p
+							| Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
+						h4 Subheading
+						p
+							| Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.
+						h4 Subheading
+						p Maecenas sed diam eget risus varius blandit sit amet non magna.
+				footer.footer
+					p &copy; Company 2013
+	'''
+	'bs-tpl-jumbotron-narrow':
+		'prefix': 'bs-tpl-jumbotron-narrow'
+		'body': '''
+	extend layout
+
+	append css
+		style.
+			/* Move down content because we have a fixed navbar that is 50px tall */
+			body {
+				padding-top: 50px;
+				padding-bottom: 20px;
+			}
+
+	block main
+			nav.navbar.navbar-inverse.navbar-fixed-top
+				.container
+					.navbar-header
+						button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target=".navbar-collapse")
+							span.icon-bar
+							span.icon-bar
+							span.icon-bar
+						a.navbar-brand(href="#") Project name
+					.navbar-collapse.collapse
+						ul.nav.navbar-nav
+							li.active
+								a(href="#") Home
+							li
+								a(href="#about") About
+							li
+								a(href="#contact") Contact
+							li.dropdown
+								a.dropdown-toggle(href="#", data-toggle="dropdown",role="button", aria-expanded="false")
+									| Dropdown
+									span.caret
+								ul.dropdown-menu(role="menu")
+									li
+										a(href="#") Action
+									li
+										a(href="#") Another action
+									li
+										a(href="#") Something else here
+									li.divider
+									li.dropdown-header Nav header
+									li
+										a(href="#") Separated link
+									li
+										a(href="#") One more separated link
+						form.navbar-form.navbar-right
+							.form-group
+								input.form-control(type="text", placeholder="Email")
+							.form-group
+								input.form-control(type="password", placeholder="Password")
+							button.btn.btn-success(type="submit") Sign in
+					//
+						/.navbar-collapse
+			// Main jumbotron for a primary marketing message or call to action
+			.jumbotron
+				.container
+					h1 Hello, world!
+					p
+						| This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
+					p
+						a.btn.btn-primary.btn-lg(href="#", role="button") Learn more »
+			.container
+				// Example row of columns
+				.row
+					.col-lg-4
+						h2 Heading
+						p
+							| Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+						p
+							a.btn.btn-default(href="#", role="button") View details »
+					.col-lg-4
+						h2 Heading
+						p
+							| Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+						p
+							a.btn.btn-default(href="#", role="button") View details »
+					.col-lg-4
+						h2 Heading
+						p
+							| Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+						p
+							a.btn.btn-default(href="#", role="button") View details »
+				hr
+				footer.footer
+					p &copy; Company 2013
+	'''
+	'bs-tpl-jumbotron':
+		'prefix': 'bs-tpl-jumbotron'
+		'body': '''
+	span.label.label-warning ${1:Label}
+	'''
+	'bs-tpl-justified-nav':
+		'prefix': 'bs-tpl-justified-nav'
+		'body': '''
+	extend layout
+
+	append css
+		style.
+			body {
+				padding-top: 20px;
+			}
+
+			.footer {
+				border-top: 1px solid #eee;
+				margin-top: 40px;
+				padding-top: 40px;
+				padding-bottom: 40px;
+			}
+
+			/* Main marketing message and sign up button */
+			.jumbotron {
+				text-align: center;
+				background-color: transparent;
+			}
+
+			.jumbotron .btn {
+				font-size: 21px;
+				padding: 14px 24px;
+			}
+
+			/* Customize the nav-justified links to be fill the entire space of the .navbar */
+
+			.nav-justified {
+				background-color: #eee;
+				border-radius: 5px;
+				border: 1px solid #ccc;
+			}
+			.nav-justified > li > a {
+				padding-top: 15px;
+				padding-bottom: 15px;
+				color: #777;
+				font-weight: bold;
+				text-align: center;
+				border-bottom: 1px solid #d5d5d5;
+				background-color: #e5e5e5; /* Old browsers */
+				background-repeat: repeat-x; /* Repeat the gradient */
+				background-image: -moz-linear-gradient(top, #f5f5f5 0%, #e5e5e5 100%); /* FF3.6+ */
+				background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f5f5), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+				background-image: -webkit-linear-gradient(top, #f5f5f5 0%,#e5e5e5 100%); /* Chrome 10+,Safari 5.1+ */
+				background-image: -ms-linear-gradient(top, #f5f5f5 0%,#e5e5e5 100%); /* IE10+ */
+				background-image: -o-linear-gradient(top, #f5f5f5 0%,#e5e5e5 100%); /* Opera 11.10+ */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#f5f5f5", endColorstr="#e5e5e5",GradientType=0 ); /* IE6-9 */
+				background-image: linear-gradient(top, #f5f5f5 0%,#e5e5e5 100%); /* W3C */
+			}
+			.nav-justified > .active > a,
+			.nav-justified > .active > a:hover,
+			.nav-justified > .active > a:focus {
+				background-color: #ddd;
+				background-image: none;
+				box-shadow: inset 0 3px 7px rgba(0,0,0,.15);
+			}
+			.nav-justified > li:first-child > a {
+				border-radius: 5px 5px 0 0;
+			}
+			.nav-justified > li:last-child > a {
+				border-bottom: 0;
+				border-radius: 0 0 5px 5px;
+			}
+
+			@media (min-width: 768px) {
+				.nav-justified {
+					max-height: 52px;
+				}
+				.nav-justified > li > a {
+					border-left: 1px solid #fff;
+					border-right: 1px solid #d5d5d5;
+				}
+				.nav-justified > li:first-child > a {
+					border-left: 0;
+					border-radius: 5px 0 0 5px;
+				}
+				.nav-justified > li:last-child > a {
+					border-radius: 0 5px 5px 0;
+					border-right: 0;
+				}
+			}
+
+			/* Responsive: Portrait tablets and up */
+			@media screen and (min-width: 768px) {
+				/* Remove the padding we set earlier */
+				.masthead,
+				.marketing,
+				.footer {
+					padding-left: 0;
+					padding-right: 0;
+				}
+			}
+
+	block main
+			.container
+				.masthead
+					h3.text-muted Project name
+					nav
+						ul.nav.nav-justified
+							li.active
+								a(href="#") Home
+							li
+								a(href="#") Projects
+							li
+								a(href="#") Services
+							li
+								a(href="#") Downloads
+							li
+								a(href="#") About
+							li
+								a(href="#") Contact
+				// Jumbotron
+				.jumbotron
+					h1 Marketing stuff!
+					p.lead
+						| Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet.
+					p
+						a.btn.btn-lg.btn-success(href="#", role="button") Get started today
+				// Example row of columns
+				.row
+					.col-lg-4
+						h2 Heading
+						p
+							| Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+						p
+							a.btn.btn-primary(href="#", role="button") View details »
+					.col-lg-4
+						h2 Heading
+						p
+							| Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+						p
+							a.btn.btn-primary(href="#", role="button") View details »
+					.col-lg-4
+						h2 Heading
+						p
+							| Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.
+						p
+							a.btn.btn-primary(href="#", role="button") View details »
+				// Site footer
+				footer.footer
+					p &copy; Company 2013
+	'''
+	'bs-tpl-navbar-fixed-top':
+		'prefix': 'bs-tpl-navbar-fixed-top'
+		'body': '''
+	extend layout
+
+	append css
+		style.
+			body {
+				min-height: 2000px;
+				padding-top: 70px;
+			}
+
+	block main
+			//
+				 Fixed navbar
+			nav.navbar.navbar-default.navbar-fixed-top
+				.container
+					.navbar-header
+						button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target=".navbar-collapse")
+							span.icon-bar
+							span.icon-bar
+							span.icon-bar
+						a.navbar-brand(href="#") Project name
+					.navbar-collapse.collapse
+						ul.nav.navbar-nav
+							li.active
+								a(href="#") Home
+							li
+								a(href="#about") About
+							li
+								a(href="#contact") Contact
+							li.dropdown
+								a.dropdown-toggle(href="#", data-toggle="dropdown", role="button", aria-expanded="false")
+									| Dropdown
+									span.caret
+								ul.dropdown-menu(role="menu")
+									li
+										a(href="#") Action
+									li
+										a(href="#") Another action
+									li
+										a(href="#") Something else here
+									li.divider
+									li.dropdown-header Nav header
+									li
+										a(href="#") Separated link
+									li
+										a(href="#") One more separated link
+						ul.nav.navbar-nav.navbar-right
+							li
+								a(href="../navbar") Default
+							li
+								a(href="../navbar-static-top") Static top
+							li.active
+								a(href="")
+									| Fixed top
+									span.sr-only (current)
+					//
+						/.nav-collapse
+			.container
+				//
+					 Main component for a primary marketing message or call to action
+				.jumbotron
+					h1 Navbar example
+					p
+						| This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.
+					p To see the difference between static and fixed top navbars, just scroll.
+					p
+						a.btn.btn-lg.btn-primary(href="http://getbootstrap.com/components/#navbar", role="button") View navbar docs »
+	'''
+	'bs-tpl-navbar-static-top':
+		'prefix': 'bs-tpl-navbar-static-top'
+		'body': '''
+	extend layout
+
+	append css
+		style.
+			body {
+				padding: 30px;
+			}
+
+			.navbar {
+				margin-bottom: 30px;
+			}
+	block main
+			.container
+				// Static navbar
+				nav.navbar.navbar-default
+					.navbar-header
+						button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target=".navbar-collapse")
+							span.icon-bar
+							span.icon-bar
+							span.icon-bar
+						a.navbar-brand(href="#") Project name
+					.navbar-collapse.collapse
+						ul.nav.navbar-nav
+							li.active
+								a(href="#") Home
+							li
+								a(href="#") About
+							li
+								a(href="#") Contact
+							li.dropdown
+								a.dropdown-toggle(href="#", data-toggle="dropdown",role="button", aria-expanded="false")
+									| Dropdown
+									span.caret
+								ul.dropdown-menu(role="menu")
+									li
+										a(href="#") Action
+									li
+										a(href="#") Another action
+									li
+										a(href="#") Something else here
+									li.divider
+									li.dropdown-header Nav header
+									li
+										a(href="#") Separated link
+									li
+										a(href="#") One more separated link
+						ul.nav.navbar-nav.navbar-right
+							li.active
+								a(href="./"")
+									| Default
+									span.sr-only (current)
+							li
+								a(href="../navbar-static-top") Static top
+							li
+								a(href="../navbar-fixed-top") Fixed top
+					//
+						/.nav-collapse
+				// Main component for a primary marketing message or call to action
+				.jumbotron
+					h1 Navbar example
+					p
+						| This example is a quick exercise to illustrate how the default, static navbar and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.
+					p
+						a.btn.btn-lg.btn-primary(href="http://getbootstrap.com/components/#navbar", role="button") View navbar docs »
+	'''
+	'bs-tpl-navbar':
+		'prefix': 'bs-tpl-navbar'
+		'body': '''
+	extend layout
+
+	append css
+		style.
+			body {
+				min-height: 2000px;
+			}
+
+			.navbar-static-top {
+				margin-bottom: 19px;
+			}
+
+	block main
+			// Static navbar
+			nav.navbar.navbar-default.navbar-static-top
+				.container
+					.navbar-header
+						button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target=".navbar-collapse")
+							span.icon-bar
+							span.icon-bar
+							span.icon-bar
+						a.navbar-brand(href="#") Project name
+					.navbar-collapse.collapse
+						ul.nav.navbar-nav
+							li.active
+								a(href="#") Home
+							li
+								a(href="#about") About
+							li
+								a(href="#contact") Contact
+							li.dropdown
+								a.dropdown-toggle(href="#", data-toggle="dropdown", role="button", aria-expanded="false")
+									| Dropdown
+									span.caret
+								ul.dropdown-menu(role="menu")
+									li
+										a(href="#") Action
+									li
+										a(href="#") Another action
+									li
+										a(href="#") Something else here
+									li.divider
+									li.dropdown-header Nav header
+									li
+										a(href="#") Separated link
+									li
+										a(href="#") One more separated link
+						ul.nav.navbar-nav.navbar-right
+							li
+								a(href="../navbar") Default
+							li.active
+								a(href="")
+									| Static top
+									span.sr-only (current)
+							li
+								a(href="../navbar-fixed-top") Fixed top
+					//
+						/.nav-collapse
+			.container
+				// Main component for a primary marketing message or call to action
+				.jumbotron
+					h1 Navbar example
+					p
+						| This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.
+					p To see the difference between static and fixed top navbars, just scroll.
+					p
+						a.btn.btn-lg.btn-primary(href="http://getbootstrap.com/components/#navbar", role="button") View navbar docs »
+	'''
+	'bs-tpl-non-responsive':
+		'prefix': 'bs-tpl-non-responsive'
+		'body': '''
+	extend layout
+
+	append css
+		style.
+
+			/* Template-specific stuff
+			*
+			* Customizations just for the templateâ€”these are not necessary for anything
+			* with disabling the responsiveness.
+			*/
+
+			/* Account for fixed navbar */
+			body {
+				padding-top: 70px;
+				padding-bottom: 30px;
+			}
+
+			/* Finesse the page header spacing */
+			.page-header {
+				margin-bottom: 30px;
+			}
+			.page-header .lead {
+				margin-bottom: 10px;
+			}
+
+
+			/* Non-responsive overrides
+			*
+			* Utilitze the following CSS to disable the responsive-ness of the container,
+			* grid system, and navbar.
+			*/
+
+			/* Reset the container */
+			.container {
+				max-width: none !important;
+				width: 970px;
+			}
+
+			/* Demonstrate the grids */
+			.col-xs-4 {
+				padding-top: 15px;
+				padding-bottom: 15px;
+				background-color: #eee;
+				border: 1px solid #ddd;
+				background-color: rgba(86,61,124,.15);
+				border: 1px solid rgba(86,61,124,.2);
+			}
+
+			.container .navbar-header,
+			.container .navbar-collapse {
+				margin-right: 0;
+				margin-left: 0;
+			}
+
+			/* Always float the navbar header */
+			.navbar-header {
+				float: left;
+			}
+
+			/* Undo the collapsing navbar */
+			.navbar-collapse {
+				display: block !important;
+				height: auto !important;
+				padding-bottom: 0;
+				overflow: visible !important;
+			}
+
+			.navbar-toggle {
+				display: none;
+			}
+
+			.navbar-brand {
+				margin-left: -15px;
+			}
+
+			/* Always apply the floated nav */
+			.navbar-nav {
+				loat: left;
+				margin: 0;
+			}
+			.navbar-nav > li {
+				float: left;
+			}
+			.navbar-nav > li > a {
+				padding: 15px;
+			}
+
+			/* Redeclare since we override the float above */
+			.navbar-nav.navbar-right {
+				float: right;
+			}
+
+			/* Undo custom dropdowns */
+			.navbar .open .dropdown-menu {
+				position: absolute;
+				float: left;
+				background-color: #fff;
+				border: 1px solid #cccccc;
+				border: 1px solid rgba(0, 0, 0, 0.15);
+				border-width: 0 1px 1px;
+				border-radius: 0 0 4px 4px;
+				-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+				box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+			}
+			.navbar .open .dropdown-menu > li > a {
+				color: #333;
+			}
+			.navbar .open .dropdown-menu > li > a:hover,
+			.navbar .open .dropdown-menu > li > a:focus,
+			.navbar .open .dropdown-menu > .active > a,
+			.navbar .open .dropdown-menu > .active > a:hover,
+			.navbar .open .dropdown-menu > .active > a:focus {
+				color: #fff !important;
+				background-color: #428bca !important;
+			}
+			.navbar .open .dropdown-menu > .disabled > a,
+			.navbar .open .dropdown-menu > .disabled > a:hover,
+			.navbar .open .dropdown-menu > .disabled > a:focus {
+				color: #999 !important;
+				background-color: transparent !important;
+			}
+	block main
+			//Fixed navbar
+			nav.navbar.navbar-default.navbar-fixed-top
+				.container
+					.navbar-header
+						button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target=".navbar-collapse")
+							span.icon-bar
+							span.icon-bar
+							span.icon-bar
+						a.navbar-brand(href="#") Project name
+					.navbar-collapse.collapse
+						ul.nav.navbar-nav
+							li.active
+								a(href="#") Home
+							li
+								a(href="#about") About
+							li
+								a(href="#contact") Contact
+							li.dropdown
+								a.dropdown-toggle(href="#", data-toggle="dropdown", role="button", aria-expanded="false")
+									| Dropdown
+									span.caret
+								ul.dropdown-menu(role="menu")
+									li
+										a(href="#") Action
+									li
+										a(href="#") Another action
+									li
+										a(href="#") Something else here
+									li.divider
+									li.dropdown-header Nav header
+									li
+										a(href="#") Separated link
+									li
+										a(href="#") One more separated link
+						ul.nav.navbar-nav.navbar-right
+							li
+								a(href="#") Link
+							li
+								a(href="#") Link
+							li
+								a(href="#") Link
+					//
+						/.nav-collapse
+			.container
+				.page-header
+					h1 Non-responsive Bootstrap
+					p.lead
+						| Disable the responsiveness of Bootstrap by fixing the width of the container and using the first grid system tier.
+				h3 What changes
+				p
+					| Note the lack of the
+					code &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+					| , which disables the zooming aspect of sites in mobile devices. In addition, we reset our container's width and are basically good to go.
+				h3 Regarding navbars
+				p
+					| As a heads up, the navbar component is rather tricky here in that the styles for displaying it are rather specific and detailed. Overrides to ensure desktop styles display are not as performant or sleek as one would like. Just be aware there may be potential gotchas as you build on top of this example when using the navbar.
+				h3 Non-responsive grid system
+				.row
+					.col-xs-4 One third
+					.col-xs-4 One third
+					.col-xs-4 One third
+	'''
+	'bs-tpl-offcanvas':
+		'prefix': 'bs-tpl-offcanvas'
+		'body': '''
+	extend layout
+
+	append css
+		style.
+			/*
+			 * Style twaks
+			 * --------------------------------------------------
+			 */
+			body {
+				padding-top: 70px;
+			}
+			footer {
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+
+			/*
+			 * Off Canvas
+			 * --------------------------------------------------
+			 */
+			@media screen and (max-width: 768px) {
+				.row-offcanvas {
+					position: relative;
+					-webkit-transition: all 0.25s ease-out;
+					-moz-transition: all 0.25s ease-out;
+					transition: all 0.25s ease-out;
+				}
+
+				.row-offcanvas-right
+				.sidebar-offcanvas {
+					right: -50%; /* 6 columns */
+				}
+
+				.row-offcanvas-left
+				.sidebar-offcanvas {
+					left: -50%; /* 6 columns */
+				}
+
+				.row-offcanvas-right.active {
+					right: 50%; /* 6 columns */
+				}
+
+				.row-offcanvas-left.active {
+					left: 50%; /* 6 columns */
+				}
+
+				.sidebar-offcanvas {
+					position: absolute;
+					top: 0;
+					width: 50%; /* 6 columns */
+				}
+			}
+
+	append bottom-script
+		script.
+			\$(document).ready(function() {
+					\$("[data-toggle=offcanvas]"").click(function() {
+						\$(".row-offcanvas").toggleClass("active");
+					});
+				});
+
+
+	block main
+			nav.navbar.navbar-fixed-top.navbar-inverse
+				.container
+					.navbar-header
+						button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target=".navbar-collapse")
+							span.icon-bar
+							span.icon-bar
+							span.icon-bar
+						a.navbar-brand(href="#") Project name
+					.collapse.navbar-collapse
+						ul.nav.navbar-nav
+							li.active
+								a(href="#") Home
+							li
+								a(href="#about") About
+							li
+								a(href="#contact") Contact
+					// /.nav-collapse
+				// /.container
+			// /.navbar
+			.container
+				.row.row-offcanvas.row-offcanvas-right
+					.col-xs-12.col-sm-9
+						p.pull-right.visible-xs
+							button.btn.btn-primary.btn-xs(type="button", data-toggle="offcanvas") Toggle nav
+						.jumbotron
+							h1 Hello, world!
+							p
+								| This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.
+						.row
+							.col-6.col-sm-6.col-lg-4
+								h2 Heading
+								p
+									| Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+								p
+									a.btn.btn-default(href="#", role="button") View details &raquo;
+							// /span
+							.col-6.col-sm-6.col-lg-4
+								h2 Heading
+								p
+									| Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+								p
+									a.btn.btn-default(href="#", role="button") View details &raquo;
+							// /span
+							.col-6.col-sm-6.col-lg-4
+								h2 Heading
+								p
+									| Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+								p
+									a.btn.btn-default(href="#", role="button") View details &raquo;
+							// /span
+							.col-6.col-sm-6.col-lg-4
+								h2 Heading
+								p
+									| Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+								p
+									a.btn.btn-default(href="#", role="button") View details &raquo;
+							// /span
+							.col-6.col-sm-6.col-lg-4
+								h2 Heading
+								p
+									| Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+								p
+									a.btn.btn-default(href="#", role="button") View details &raquo;
+							// /span
+							.col-6.col-sm-6.col-lg-4
+								h2 Heading
+								p
+									| Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+								p
+									a.btn.btn-default(href="#", role="button") View details &raquo;
+							// /span
+						// /row
+					// /span
+					#sidebar.col-xs-6.col-sm-3.sidebar-offcanvas
+						.well.sidebar-nav
+							ul.nav
+								li Sidebar
+								li.active
+									a(href="#") Link
+								li
+									a(href="#") Link
+								li
+									a(href="#") Link
+								li Sidebar
+								li
+									a(href="#") Link
+								li
+									a(href="#") Link
+								li
+									a(href="#") Link
+								li Sidebar
+								li
+									a(href="#") Link
+								li
+									a(href="#") Link
+						// /.well
+					// /span
+				// /row
+				hr
+				footer
+					p &copy; Company 2013
+	'''
+	'bs-tpl-signin':
+		'prefix': 'bs-tpl-signin'
+		'body': '''
+	extend layout
+
+	append css
+		style.
+			body {
+				padding-top: 40px;
+				padding-bottom: 40px;
+				background-color: #eee;
+			}
+
+			.form-signin {
+				max-width: 330px;
+				padding: 15px;
+				margin: 0 auto;
+			}
+			.form-signin .form-signin-heading,
+			.form-signin .checkbox {
+				margin-bottom: 10px;
+			}
+			.form-signin .checkbox {
+				font-weight: normal;
+			}
+			.form-signin .form-control {
+				position: relative;
+				font-size: 16px;
+				height: auto;
+				padding: 10px;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+			.form-signin .form-control:focus {
+				z-index: 2;
+			}
+			.form-signin input[type="text"] {
+				margin-bottom: -1px;
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+			.form-signin input[type="password"] {
+				margin-bottom: 10px;
+				border-top-left-radius: 0;
+				border-top-right-radius: 0;
+			}
+	block main
+		.container
+			form.form-signin
+				h2.form-signin-heading Please sign in
+				label.sr-only(for="inputEmail") Email address
+				input#inputEmail.form-control(type="text", placeholder="Email address", autofocus, required)
+				label.sr-only(for="inputPassword") Password
+				input#inputPassword.form-control(type="password", placeholder="Password", required)
+				label.checkbox
+					input(type="checkbox", value="remember-me")
+					| Remember me
+				button.btn.btn-lg.btn-primary.btn-block(type="submit") Sign in
+	'''
+	'bs-tpl-starter-template':
+		'prefix': 'bs-tpl-starter-template'
+		'body': '''
+	extend layout
+
+	append css
+		style.
+			body {
+				padding-top: 50px;
+			}
+			.starter-template {
+				padding: 40px 15px;
+				text-align: center;
+			}
+
+	block main
+		nav.navbar.navbar-inverse.navbar-fixed-top
+			.container
+				.navbar-header
+					button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target=".navbar-collapse")
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.navbar-brand(href="#") Project name
+				.collapse.navbar-collapse
+					ul.nav.navbar-nav
+						li.active
+							a(href="#") Home
+						li
+							a(href="#about") About
+						li
+							a(href="#contact") Contact
+		.container
+			.starter-template
+				h1 Bootstrap starter template
+				p.lead
+					| Use this document as a way to quickly start any new project.
+					br
+					| All you get is this text and a mostly barebones HTML document.
+	'''
+	'bs-tpl-sticky-footer-navbar':
+		'prefix': 'bs-tpl-sticky-footer-navbar'
+		'body': '''
+	extend layout
+
+	block append css
+		style.
+			body {
+				padding-top: 70px;
+				padding-bottom: 30px;
+			}
+
+			.theme-dropdown .dropdown-menu {
+				display: block;
+				position: static;
+				margin-bottom: 20px;
+			}
+
+			.theme-showcase > p > .btn {
+				margin: 5px 0;
+			}
+
+	block main
+
+			// Fixed navbar
+			nav.navbar.navbar-inverse.navbar-fixed-top
+				.container
+					.navbar-header
+						button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target=".navbar-collapse")
+							span.icon-bar
+							span.icon-bar
+							span.icon-bar
+						a.navbar-brand(href="#") Bootstrap theme
+					.navbar-collapse.collapse
+						ul.nav.navbar-nav
+							li.active
+								a(href="#") Home
+							li
+								a(href="#about") About
+							li
+								a(href="#contact") Contact
+							li.dropdown
+								a.dropdown-toggle(href="#", data-toggle="dropdown", role="button", aria-expanded="false")
+									| Dropdown
+									span.caret
+								ul.dropdown-menu(role="menu")
+									li
+										a(href="#") Action
+									li
+										a(href="#") Another action
+									li
+										a(href="#") Something else here
+									li.divider
+									li.dropdown-header Nav header
+									li
+										a(href="#") Separated link
+									li
+										a(href="#") One more separated link
+					// /.nav-collapse
+			.container.theme-showcase
+				// Main jumbotron for a primary marketing message or call to action
+				.jumbotron
+					h1 Hello, world!
+					p
+						| This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
+					p
+						a.btn.btn-primary.btn-lg(role="button") Learn more &raquo;
+				.page-header
+					h1 Buttons
+				p
+					button.btn.btn-lg.btn-default(type="button") Default
+					button.btn.btn-lg.btn-primary(type="button") Primary
+					button.btn.btn-lg.btn-success(type="button") Success
+					button.btn.btn-lg.btn-info(type="button") Info
+					button.btn.btn-lg.btn-warning(type="button") Warning
+					button.btn.btn-lg.btn-danger(type="button") Danger
+					button.btn.btn-lg.btn-link(type="button") Link
+				p
+					button.btn.btn-default(type="button") Default
+					button.btn.btn-primary(type="button") Primary
+					button.btn.btn-success(type="button") Success
+					button.btn.btn-info(type="button") Info
+					button.btn.btn-warning(type="button") Warning
+					button.btn.btn-danger(type="button") Danger
+					button.btn.btn-link(type="button") Link
+				p
+					button.btn.btn-sm.btn-default(type="button") Default
+					button.btn.btn-sm.btn-primary(type="button") Primary
+					button.btn.btn-sm.btn-success(type="button") Success
+					button.btn.btn-sm.btn-info(type="button") Info
+					button.btn.btn-sm.btn-warning(type="button") Warning
+					button.btn.btn-sm.btn-danger(type="button") Danger
+					button.btn.btn-sm.btn-link(type="button") Link
+				p
+					button.btn.btn-xs.btn-default(type="button") Default
+					button.btn.btn-xs.btn-primary(type="button") Primary
+					button.btn.btn-xs.btn-success(type="button") Success
+					button.btn.btn-xs.btn-info(type="button") Info
+					button.btn.btn-xs.btn-warning(type="button") Warning
+					button.btn.btn-xs.btn-danger(type="button") Danger
+					button.btn.btn-xs.btn-link(type="button") Link
+				.page-header
+					h1 Thumbnails
+				img.img-thumbnail(data-src="holder.js/200x200", src="data:image/png;base64,", alt="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera")
+				.page-header
+					h1 Dropdown menus
+				.dropdown.theme-dropdown.clearfix
+					a#dropdownMenu1.sr-only.dropdown-toggle(href="#", role="button", data-toggle="dropdown", aria-expanded="false")
+						| Dropdown
+						span.caret
+					ul.dropdown-menu(role="menu", aria-labelledby="dropdownMenu1")
+						li(role="presentation")
+							a(role="menuitem", tabindex="-1", href="#") Action
+						li(role="presentation")
+							a(role="menuitem", tabindex="-1", href="#") Another action
+						li(role="presentation")
+							a(role="menuitem", tabindex="-1", href="#") Something else here
+						li.divider(role="presentation")
+						li(role="presentation")
+							a(role="menuitem", tabindex="-1", href="#") Separated link
+				.page-header
+					h1 Navbars
+				.navbar.navbar-default
+					.container
+						.navbar-header
+							button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target=".navbar-collapse")
+								span.icon-bar
+								span.icon-bar
+								span.icon-bar
+							a.navbar-brand(href="#") Project name
+						.navbar-collapse.collapse
+							ul.nav.navbar-nav
+								li.active
+									a(href="#") Home
+								li
+									a(href="#about") About
+								li
+									a(href="#contact") Contact
+								li.dropdown
+									a.dropdown-toggle(href="#", data-toggle="dropdown", role="button", aria-expanded="false")
+										| Dropdown
+										span.caret
+									ul.dropdown-menu(role="menu")
+										li
+											a(href="#") Action
+										li
+											a(href="#") Another action
+										li
+											a(href="#") Something else here
+										li.divider
+										li.dropdown-header Nav header
+										li
+											a(href="#") Separated link
+										li
+											a(href="#") One more separated link
+							ul.nav.navbar-nav.navbar-right
+								li
+									a(href="/template/navbar") Default
+								li
+									a(href="/template/navbar-static-top") Static top
+								li.active
+									a(href="") Fixed top
+						// /.nav-collapse
+				.navbar.navbar-inverse
+					.container
+						.navbar-header
+							button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target=".navbar-collapse")
+								span.icon-bar
+								span.icon-bar
+								span.icon-bar
+							a.navbar-brand(href="#") Project name
+						.navbar-collapse.collapse
+							ul.nav.navbar-nav
+								li.active
+									a(href="#") Home
+								li
+									a(href="#about") About
+								li
+									a(href="#contact") Contact
+								li.dropdown
+									a.dropdown-toggle(href="#", data-toggle="dropdown", role="button", aria-expanded="false")
+										| Dropdown
+										span.caret
+									ul.dropdown-menu(role="menu")
+										li
+											a(href="#") Action
+										li
+											a(href="#") Another action
+										li
+											a(href="#") Something else here
+										li.divider
+										li.dropdown-header Nav header
+										li
+											a(href="#") Separated link
+										li
+											a(href="#") One more separated link
+							ul.nav.navbar-nav.navbar-right
+								li
+									a(href="/template/navbar") Default
+								li
+									a(href="/template/navbar-static-top") Static top
+								li.active
+									a(href="") Fixed top
+						// /.nav-collapse
+				.page-header
+					h1 Alerts
+				.alert.alert-success
+					strong Well done!&nbsp;
+					| You successfully read this important alert message.
+				.alert.alert-info
+					strong Heads up!&nbsp;
+					| This alert needs your attention, but it's not super important.
+				.alert.alert-warning
+					strong Warning!&nbsp;
+					| Best check yo self, you're not looking too good.
+				.alert.alert-danger
+					strong Oh snap!&nbsp;
+					| Change a few things up and try submitting again.
+				.page-header
+					h1 Progress bars
+				.progress
+					.progress-bar(role="progressbar", aria-valuenow="60", aria-valuemin="0", aria-valuemax="100", style="width: 60%;")
+						span.sr-only 60% Complete
+				.progress
+					.progress-bar.progress-bar-success(role="progressbar", aria-valuenow="40", aria-valuemin="0", aria-valuemax="100", style="width: 40%;")
+						span.sr-only 40% Complete (success)
+				.progress
+					.progress-bar.progress-bar-info(role="progressbar", aria-valuenow="20", aria-valuemin="0", aria-valuemax="100", style="width: 20%;")
+						span.sr-only 20% Complete
+				.progress
+					.progress-bar.progress-bar-warning(role="progressbar", aria-valuenow="60", aria-valuemin="0", aria-valuemax="100", style="width: 60%;")
+						span.sr-only 60% Complete (warning)
+				.progress
+					.progress-bar.progress-bar-danger(role="progressbar", aria-valuenow="80", aria-valuemin="0", aria-valuemax="100", style="width: 80%;")
+						span.sr-only 80% Complete (danger)
+				.progress
+					.progress-bar.progress-bar-success(style="width: 35%;")
+						span.sr-only 35% Complete (success)
+					.progress-bar.progress-bar-warning(style="width: 20%;")
+						span.sr-only 20% Complete (warning)
+					.progress-bar.progress-bar-danger(style="width: 10%;")
+						span.sr-only 10% Complete (danger)
+				.page-header
+					h1 List groups
+				.row
+					.col-sm-4
+						ul.list-group
+							li.list-group-item Cras justo odio
+							li.list-group-item Dapibus ac facilisis in
+							li.list-group-item Morbi leo risus
+							li.list-group-item Porta ac consectetur ac
+							li.list-group-item Vestibulum at eros
+					// /.col-sm-4
+					.col-sm-4
+						.list-group
+							a.list-group-item.active(href="#")
+								| Cras justo odio
+							a.list-group-item(href="#") Dapibus ac facilisis in
+							a.list-group-item(href="#") Morbi leo risus
+							a.list-group-item(href="#") Porta ac consectetur ac
+							a.list-group-item(href="#") Vestibulum at eros
+					// /.col-sm-4
+					.col-sm-4
+						.list-group
+							a.list-group-item.active(href="#")
+								h4.list-group-item-heading List group item heading
+								p.list-group-item-text
+									| Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+							a.list-group-item(href="#")
+								h4.list-group-item-heading List group item heading
+								p.list-group-item-text
+									| Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+							a.list-group-item(href="#")
+								h4.list-group-item-heading List group item heading
+								p.list-group-item-text
+									| Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+					// /.col-sm-4
+				.page-header
+					h1 Panels
+				.row
+					.col-sm-4
+						.panel.panel-default
+							.panel-heading
+								h3.panel-title Panel title
+							.panel-body
+								| Panel content
+						.panel.panel-primary
+							.panel-heading
+								h3.panel-title Panel title
+							.panel-body
+								| Panel content
+					// /.col-sm-4
+					.col-sm-4
+						.panel.panel-success
+							.panel-heading
+								h3.panel-title Panel title
+							.panel-body
+								| Panel content
+						.panel.panel-info
+							.panel-heading
+								h3.panel-title Panel title
+							.panel-body
+								| Panel content
+					// /.col-sm-4
+					.col-sm-4
+						.panel.panel-warning
+							.panel-heading
+								h3.panel-title Panel title
+							.panel-body
+								| Panel content
+						.panel.panel-danger
+							.panel-heading
+								h3.panel-title Panel title
+							.panel-body
+								| Panel content
+					// /.col-sm-4
+				.page-header
+					h1 Wells
+				.well
+					p
+						| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.
+	'''
+	'bs-tpl-sticky-footer':
+		'prefix': 'bs-tpl-sticky-footer'
+		'body': '''
+	extend layout
+
+	append css
+		style.
+			html {
+				position: relative;
+				min-height: 100%;
+			}
+			body {
+				/* Margin bottom by footer height */
+				margin-bottom: 60px;
+			}
+			.footer {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				/* Set the fixed height of the footer here */
+				height: 60px;
+				background-color: #f5f5f5;
+			}
+			.container .text-muted {
+				margin: 20px 0;
+			}
+
+	block main
+
+		// Wrap all page content here
+		#wrap
+			// Begin page content
+			.container
+				.page-header
+					h1 Sticky footer
+				p.lead
+					| Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS.
+				p
+					| Use
+					a(href="/template/sticky-footer-navbar") the sticky footer with a fixed navbar
+					| if need be, too.
+		footer.footer
+			.container
+				p.text-muted.credit
+					| Example courtesy
+					a(href="http://martinbean.co.uk") Martin Bean
+					| and
+					a(href="http://ryanfait.com/sticky-footer/") Ryan Fait
+					| .
+	'''
+	'bs-tpl-theme':
+		'prefix': 'bs-tpl-theme'
+		'body': '''
+	extend layout
+
+	append css
+		style.
+			html {
+				position: relative;
+				min-height: 100%;
+			}
+			body {
+				/* Margin bottom by footer height */
+				margin-bottom: 60px;
+			}
+			.footer {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				/* Set the fixed height of the footer here */
+				height: 60px;
+				background-color: #f5f5f5;
+			}
+			/* Custom page CSS
+			-------------------------------------------------- */
+			/* Not required for template or sticky footer method. */
+
+			body > .container {
+				padding: 60px 15px 0;
+			}
+			.container .text-muted {
+				margin: 20px 0;
+			}
+
+			.footer > .container {
+				padding-right: 15px;
+				padding-left: 15px;
+			}
+
+			code {
+				font-size: 80%;
+			}
+
+	block main
+		// Fixed navbar
+		nav.navbar.navbar-default.navbar-fixed-top
+			.container
+				.navbar-header
+					button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target=".navbar-collapse")
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.navbar-brand(href="#") Project name
+				.collapse.navbar-collapse
+					ul.nav.navbar-nav
+						li.active
+							a(href="#") Home
+						li
+							a(href="#about") About
+						li
+							a(href="#contact") Contact
+						li.dropdown
+							a.dropdown-toggle(href="#", data-toggle="dropdown", role="button", aria-expanded="false")
+								| Dropdown
+								span.caret
+							ul.dropdown-menu(role="menu")
+								li
+									a(href="#") Action
+								li
+									a(href="#") Another action
+								li
+									a(href="#") Something else here
+								li.divider
+								li.dropdown-header Nav header
+								li
+									a(href="#") Separated link
+								li
+									a(href="#") One more separated link
+				// /.nav-collapse
+		// Begin page content
+		.container
+			.page-header
+				h1 Sticky footer with fixed navbar
+			p.lead
+				| Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with
+				code padding-top: 60px;
+				|  on the
+				code body > .container
+				| .
+			p
+				| Back to
+				a(href="/template/sticky-footer") the default sticky footer
+				| minus the navbar.
+		footer.footer
+			.container
+				p.text-muted.credit
+					| Example courtesy
+					a(href="http://martinbean.co.uk") Martin Bean
+					| and
+					a(href="http://ryanfait.com/sticky-footer/") Ryan Fait
+					| .
+	'''
+
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+
+	'navbar':
+		'prefix': 'navbar'
+		'body': 'navbar'
+	'caret':
+		'prefix': 'caret'
+		'body': 'caret'
+	'label':
+		'prefix': 'label'
+		'body': 'label'
+	'table':
+		'prefix': 'table'
+		'body': 'table'
+	'img-responsive':
+		'prefix': 'img-responsive'
+		'body': 'img-responsive'
+	'img-rounded':
+		'prefix': 'img-rounded'
+		'body': 'img-rounded'
+	'img-thumbnail':
+		'prefix': 'img-thumbnail'
+		'body': 'img-thumbnail'
+	'img-circle':
+		'prefix': 'img-circle'
+		'body': 'img-circle'
+	'sr-only':
+		'prefix': 'sr-only'
+		'body': 'sr-only'
+	'lead':
+		'prefix': 'lead'
+		'body': 'lead'
+	'text-muted':
+		'prefix': 'text-muted'
+		'body': 'text-muted'
+	'text-primary':
+		'prefix': 'text-primary'
+		'body': 'text-primary'
+	'text-warning':
+		'prefix': 'text-warning'
+		'body': 'text-warning'
+	'text-danger':
+		'prefix': 'text-danger'
+		'body': 'text-danger'
+	'text-success':
+		'prefix': 'text-success'
+		'body': 'text-success'
+	'text-info':
+		'prefix': 'text-info'
+		'body': 'text-info'
+	'text-left':
+		'prefix': 'text-left'
+		'body': 'text-left'
+	'text-right':
+		'prefix': 'text-right'
+		'body': 'text-right'
+	'text-center':
+		'prefix': 'text-center'
+		'body': 'text-center'
+	'h6':
+		'prefix': 'h6'
+		'body': 'h6'
+	'h1':
+		'prefix': 'h1'
+		'body': 'h1'
+	'h2':
+		'prefix': 'h2'
+		'body': 'h2'
+	'h3':
+		'prefix': 'h3'
+		'body': 'h3'
+	'h4':
+		'prefix': 'h4'
+		'body': 'h4'
+	'h5':
+		'prefix': 'h5'
+		'body': 'h5'
+	'page-header':
+		'prefix': 'page-header'
+		'body': 'page-header'
+	'list-unstyled':
+		'prefix': 'list-unstyled'
+		'body': 'list-unstyled'
+	'list-inline':
+		'prefix': 'list-inline'
+		'body': 'list-inline'
+	'initialism':
+		'prefix': 'initialism'
+		'body': 'initialism'
+	'pull-right':
+		'prefix': 'pull-right'
+		'body': 'pull-right'
+	'prettyprint':
+		'prefix': 'prettyprint'
+		'body': 'prettyprint'
+	'pre-scrollable':
+		'prefix': 'pre-scrollable'
+		'body': 'pre-scrollable'
+	'container':
+		'prefix': 'container'
+		'body': 'container'
+	'row':
+		'prefix': 'row'
+		'body': 'row'
+	'col-lg-12':
+		'prefix': 'col-lg-12'
+		'body': 'col-lg-12'
+	'col-xs-11':
+		'prefix': 'col-xs-11'
+		'body': 'col-xs-11'
+	'col-xs-1':
+		'prefix': 'col-xs-1'
+		'body': 'col-xs-1'
+	'col-xs-2':
+		'prefix': 'col-xs-2'
+		'body': 'col-xs-2'
+	'col-xs-3':
+		'prefix': 'col-xs-3'
+		'body': 'col-xs-3'
+	'col-xs-4':
+		'prefix': 'col-xs-4'
+		'body': 'col-xs-4'
+	'col-xs-5':
+		'prefix': 'col-xs-5'
+		'body': 'col-xs-5'
+	'col-xs-6':
+		'prefix': 'col-xs-6'
+		'body': 'col-xs-6'
+	'col-xs-7':
+		'prefix': 'col-xs-7'
+		'body': 'col-xs-7'
+	'col-xs-8':
+		'prefix': 'col-xs-8'
+		'body': 'col-xs-8'
+	'col-xs-9':
+		'prefix': 'col-xs-9'
+		'body': 'col-xs-9'
+	'col-xs-10':
+		'prefix': 'col-xs-10'
+		'body': 'col-xs-10'
+	'col-xs-12':
+		'prefix': 'col-xs-12'
+		'body': 'col-xs-12'
+	'col-sm-11':
+		'prefix': 'col-sm-11'
+		'body': 'col-sm-11'
+	'col-sm-1':
+		'prefix': 'col-sm-1'
+		'body': 'col-sm-1'
+	'col-sm-2':
+		'prefix': 'col-sm-2'
+		'body': 'col-sm-2'
+	'col-sm-3':
+		'prefix': 'col-sm-3'
+		'body': 'col-sm-3'
+	'col-sm-4':
+		'prefix': 'col-sm-4'
+		'body': 'col-sm-4'
+	'col-sm-5':
+		'prefix': 'col-sm-5'
+		'body': 'col-sm-5'
+	'col-sm-6':
+		'prefix': 'col-sm-6'
+		'body': 'col-sm-6'
+	'col-sm-7':
+		'prefix': 'col-sm-7'
+		'body': 'col-sm-7'
+	'col-sm-8':
+		'prefix': 'col-sm-8'
+		'body': 'col-sm-8'
+	'col-sm-9':
+		'prefix': 'col-sm-9'
+		'body': 'col-sm-9'
+	'col-sm-10':
+		'prefix': 'col-sm-10'
+		'body': 'col-sm-10'
+	'col-sm-12':
+		'prefix': 'col-sm-12'
+		'body': 'col-sm-12'
+	'col-sm-push-1':
+		'prefix': 'col-sm-push-1'
+		'body': 'col-sm-push-1'
+	'col-sm-push-2':
+		'prefix': 'col-sm-push-2'
+		'body': 'col-sm-push-2'
+	'col-sm-push-3':
+		'prefix': 'col-sm-push-3'
+		'body': 'col-sm-push-3'
+	'col-sm-push-4':
+		'prefix': 'col-sm-push-4'
+		'body': 'col-sm-push-4'
+	'col-sm-push-5':
+		'prefix': 'col-sm-push-5'
+		'body': 'col-sm-push-5'
+	'col-sm-push-6':
+		'prefix': 'col-sm-push-6'
+		'body': 'col-sm-push-6'
+	'col-sm-push-7':
+		'prefix': 'col-sm-push-7'
+		'body': 'col-sm-push-7'
+	'col-sm-push-8':
+		'prefix': 'col-sm-push-8'
+		'body': 'col-sm-push-8'
+	'col-sm-push-9':
+		'prefix': 'col-sm-push-9'
+		'body': 'col-sm-push-9'
+	'col-sm-push-10':
+		'prefix': 'col-sm-push-10'
+		'body': 'col-sm-push-10'
+	'col-sm-push-11':
+		'prefix': 'col-sm-push-11'
+		'body': 'col-sm-push-11'
+	'col-sm-pull-1':
+		'prefix': 'col-sm-pull-1'
+		'body': 'col-sm-pull-1'
+	'col-sm-pull-2':
+		'prefix': 'col-sm-pull-2'
+		'body': 'col-sm-pull-2'
+	'col-sm-pull-3':
+		'prefix': 'col-sm-pull-3'
+		'body': 'col-sm-pull-3'
+	'col-sm-pull-4':
+		'prefix': 'col-sm-pull-4'
+		'body': 'col-sm-pull-4'
+	'col-sm-pull-5':
+		'prefix': 'col-sm-pull-5'
+		'body': 'col-sm-pull-5'
+	'col-sm-pull-6':
+		'prefix': 'col-sm-pull-6'
+		'body': 'col-sm-pull-6'
+	'col-sm-pull-7':
+		'prefix': 'col-sm-pull-7'
+		'body': 'col-sm-pull-7'
+	'col-sm-pull-8':
+		'prefix': 'col-sm-pull-8'
+		'body': 'col-sm-pull-8'
+	'col-sm-pull-9':
+		'prefix': 'col-sm-pull-9'
+		'body': 'col-sm-pull-9'
+	'col-sm-pull-10':
+		'prefix': 'col-sm-pull-10'
+		'body': 'col-sm-pull-10'
+	'col-sm-pull-11':
+		'prefix': 'col-sm-pull-11'
+		'body': 'col-sm-pull-11'
+	'col-sm-offset-1':
+		'prefix': 'col-sm-offset-1'
+		'body': 'col-sm-offset-1'
+	'col-sm-offset-2':
+		'prefix': 'col-sm-offset-2'
+		'body': 'col-sm-offset-2'
+	'col-sm-offset-3':
+		'prefix': 'col-sm-offset-3'
+		'body': 'col-sm-offset-3'
+	'col-sm-offset-4':
+		'prefix': 'col-sm-offset-4'
+		'body': 'col-sm-offset-4'
+	'col-sm-offset-5':
+		'prefix': 'col-sm-offset-5'
+		'body': 'col-sm-offset-5'
+	'col-sm-offset-6':
+		'prefix': 'col-sm-offset-6'
+		'body': 'col-sm-offset-6'
+	'col-sm-offset-7':
+		'prefix': 'col-sm-offset-7'
+		'body': 'col-sm-offset-7'
+	'col-sm-offset-8':
+		'prefix': 'col-sm-offset-8'
+		'body': 'col-sm-offset-8'
+	'col-sm-offset-9':
+		'prefix': 'col-sm-offset-9'
+		'body': 'col-sm-offset-9'
+	'col-sm-offset-10':
+		'prefix': 'col-sm-offset-10'
+		'body': 'col-sm-offset-10'
+	'col-sm-offset-11':
+		'prefix': 'col-sm-offset-11'
+		'body': 'col-sm-offset-11'
+	'col-md-11':
+		'prefix': 'col-md-11'
+		'body': 'col-md-11'
+	'col-md-1':
+		'prefix': 'col-md-1'
+		'body': 'col-md-1'
+	'col-md-2':
+		'prefix': 'col-md-2'
+		'body': 'col-md-2'
+	'col-md-3':
+		'prefix': 'col-md-3'
+		'body': 'col-md-3'
+	'col-md-4':
+		'prefix': 'col-md-4'
+		'body': 'col-md-4'
+	'col-md-5':
+		'prefix': 'col-md-5'
+		'body': 'col-md-5'
+	'col-md-6':
+		'prefix': 'col-md-6'
+		'body': 'col-md-6'
+	'col-md-7':
+		'prefix': 'col-md-7'
+		'body': 'col-md-7'
+	'col-md-8':
+		'prefix': 'col-md-8'
+		'body': 'col-md-8'
+	'col-md-9':
+		'prefix': 'col-md-9'
+		'body': 'col-md-9'
+	'col-md-10':
+		'prefix': 'col-md-10'
+		'body': 'col-md-10'
+	'col-md-12':
+		'prefix': 'col-md-12'
+		'body': 'col-md-12'
+	'col-md-push-0':
+		'prefix': 'col-md-push-0'
+		'body': 'col-md-push-0'
+	'col-md-push-1':
+		'prefix': 'col-md-push-1'
+		'body': 'col-md-push-1'
+	'col-md-push-2':
+		'prefix': 'col-md-push-2'
+		'body': 'col-md-push-2'
+	'col-md-push-3':
+		'prefix': 'col-md-push-3'
+		'body': 'col-md-push-3'
+	'col-md-push-4':
+		'prefix': 'col-md-push-4'
+		'body': 'col-md-push-4'
+	'col-md-push-5':
+		'prefix': 'col-md-push-5'
+		'body': 'col-md-push-5'
+	'col-md-push-6':
+		'prefix': 'col-md-push-6'
+		'body': 'col-md-push-6'
+	'col-md-push-7':
+		'prefix': 'col-md-push-7'
+		'body': 'col-md-push-7'
+	'col-md-push-8':
+		'prefix': 'col-md-push-8'
+		'body': 'col-md-push-8'
+	'col-md-push-9':
+		'prefix': 'col-md-push-9'
+		'body': 'col-md-push-9'
+	'col-md-push-10':
+		'prefix': 'col-md-push-10'
+		'body': 'col-md-push-10'
+	'col-md-push-11':
+		'prefix': 'col-md-push-11'
+		'body': 'col-md-push-11'
+	'col-md-pull-0':
+		'prefix': 'col-md-pull-0'
+		'body': 'col-md-pull-0'
+	'col-md-pull-1':
+		'prefix': 'col-md-pull-1'
+		'body': 'col-md-pull-1'
+	'col-md-pull-2':
+		'prefix': 'col-md-pull-2'
+		'body': 'col-md-pull-2'
+	'col-md-pull-3':
+		'prefix': 'col-md-pull-3'
+		'body': 'col-md-pull-3'
+	'col-md-pull-4':
+		'prefix': 'col-md-pull-4'
+		'body': 'col-md-pull-4'
+	'col-md-pull-5':
+		'prefix': 'col-md-pull-5'
+		'body': 'col-md-pull-5'
+	'col-md-pull-6':
+		'prefix': 'col-md-pull-6'
+		'body': 'col-md-pull-6'
+	'col-md-pull-7':
+		'prefix': 'col-md-pull-7'
+		'body': 'col-md-pull-7'
+	'col-md-pull-8':
+		'prefix': 'col-md-pull-8'
+		'body': 'col-md-pull-8'
+	'col-md-pull-9':
+		'prefix': 'col-md-pull-9'
+		'body': 'col-md-pull-9'
+	'col-md-pull-10':
+		'prefix': 'col-md-pull-10'
+		'body': 'col-md-pull-10'
+	'col-md-pull-11':
+		'prefix': 'col-md-pull-11'
+		'body': 'col-md-pull-11'
+	'col-md-offset-0':
+		'prefix': 'col-md-offset-0'
+		'body': 'col-md-offset-0'
+	'col-md-offset-1':
+		'prefix': 'col-md-offset-1'
+		'body': 'col-md-offset-1'
+	'col-md-offset-2':
+		'prefix': 'col-md-offset-2'
+		'body': 'col-md-offset-2'
+	'col-md-offset-3':
+		'prefix': 'col-md-offset-3'
+		'body': 'col-md-offset-3'
+	'col-md-offset-4':
+		'prefix': 'col-md-offset-4'
+		'body': 'col-md-offset-4'
+	'col-md-offset-5':
+		'prefix': 'col-md-offset-5'
+		'body': 'col-md-offset-5'
+	'col-md-offset-6':
+		'prefix': 'col-md-offset-6'
+		'body': 'col-md-offset-6'
+	'col-md-offset-7':
+		'prefix': 'col-md-offset-7'
+		'body': 'col-md-offset-7'
+	'col-md-offset-8':
+		'prefix': 'col-md-offset-8'
+		'body': 'col-md-offset-8'
+	'col-md-offset-9':
+		'prefix': 'col-md-offset-9'
+		'body': 'col-md-offset-9'
+	'col-md-offset-10':
+		'prefix': 'col-md-offset-10'
+		'body': 'col-md-offset-10'
+	'col-md-offset-11':
+		'prefix': 'col-md-offset-11'
+		'body': 'col-md-offset-11'
+	'col-lg-11':
+		'prefix': 'col-lg-11'
+		'body': 'col-lg-11'
+	'col-lg-1':
+		'prefix': 'col-lg-1'
+		'body': 'col-lg-1'
+	'col-lg-2':
+		'prefix': 'col-lg-2'
+		'body': 'col-lg-2'
+	'col-lg-3':
+		'prefix': 'col-lg-3'
+		'body': 'col-lg-3'
+	'col-lg-4':
+		'prefix': 'col-lg-4'
+		'body': 'col-lg-4'
+	'col-lg-5':
+		'prefix': 'col-lg-5'
+		'body': 'col-lg-5'
+	'col-lg-6':
+		'prefix': 'col-lg-6'
+		'body': 'col-lg-6'
+	'col-lg-7':
+		'prefix': 'col-lg-7'
+		'body': 'col-lg-7'
+	'col-lg-8':
+		'prefix': 'col-lg-8'
+		'body': 'col-lg-8'
+	'col-lg-9':
+		'prefix': 'col-lg-9'
+		'body': 'col-lg-9'
+	'col-lg-10':
+		'prefix': 'col-lg-10'
+		'body': 'col-lg-10'
+	'col-lg-push-0':
+		'prefix': 'col-lg-push-0'
+		'body': 'col-lg-push-0'
+	'col-lg-push-1':
+		'prefix': 'col-lg-push-1'
+		'body': 'col-lg-push-1'
+	'col-lg-push-2':
+		'prefix': 'col-lg-push-2'
+		'body': 'col-lg-push-2'
+	'col-lg-push-3':
+		'prefix': 'col-lg-push-3'
+		'body': 'col-lg-push-3'
+	'col-lg-push-4':
+		'prefix': 'col-lg-push-4'
+		'body': 'col-lg-push-4'
+	'col-lg-push-5':
+		'prefix': 'col-lg-push-5'
+		'body': 'col-lg-push-5'
+	'col-lg-push-6':
+		'prefix': 'col-lg-push-6'
+		'body': 'col-lg-push-6'
+	'col-lg-push-7':
+		'prefix': 'col-lg-push-7'
+		'body': 'col-lg-push-7'
+	'col-lg-push-8':
+		'prefix': 'col-lg-push-8'
+		'body': 'col-lg-push-8'
+	'col-lg-push-9':
+		'prefix': 'col-lg-push-9'
+		'body': 'col-lg-push-9'
+	'col-lg-push-10':
+		'prefix': 'col-lg-push-10'
+		'body': 'col-lg-push-10'
+	'col-lg-push-11':
+		'prefix': 'col-lg-push-11'
+		'body': 'col-lg-push-11'
+	'col-lg-pull-0':
+		'prefix': 'col-lg-pull-0'
+		'body': 'col-lg-pull-0'
+	'col-lg-pull-1':
+		'prefix': 'col-lg-pull-1'
+		'body': 'col-lg-pull-1'
+	'col-lg-pull-2':
+		'prefix': 'col-lg-pull-2'
+		'body': 'col-lg-pull-2'
+	'col-lg-pull-3':
+		'prefix': 'col-lg-pull-3'
+		'body': 'col-lg-pull-3'
+	'col-lg-pull-4':
+		'prefix': 'col-lg-pull-4'
+		'body': 'col-lg-pull-4'
+	'col-lg-pull-5':
+		'prefix': 'col-lg-pull-5'
+		'body': 'col-lg-pull-5'
+	'col-lg-pull-6':
+		'prefix': 'col-lg-pull-6'
+		'body': 'col-lg-pull-6'
+	'col-lg-pull-7':
+		'prefix': 'col-lg-pull-7'
+		'body': 'col-lg-pull-7'
+	'col-lg-pull-8':
+		'prefix': 'col-lg-pull-8'
+		'body': 'col-lg-pull-8'
+	'col-lg-pull-9':
+		'prefix': 'col-lg-pull-9'
+		'body': 'col-lg-pull-9'
+	'col-lg-pull-10':
+		'prefix': 'col-lg-pull-10'
+		'body': 'col-lg-pull-10'
+	'col-lg-pull-11':
+		'prefix': 'col-lg-pull-11'
+		'body': 'col-lg-pull-11'
+	'col-lg-offset-0':
+		'prefix': 'col-lg-offset-0'
+		'body': 'col-lg-offset-0'
+	'col-lg-offset-1':
+		'prefix': 'col-lg-offset-1'
+		'body': 'col-lg-offset-1'
+	'col-lg-offset-2':
+		'prefix': 'col-lg-offset-2'
+		'body': 'col-lg-offset-2'
+	'col-lg-offset-3':
+		'prefix': 'col-lg-offset-3'
+		'body': 'col-lg-offset-3'
+	'col-lg-offset-4':
+		'prefix': 'col-lg-offset-4'
+		'body': 'col-lg-offset-4'
+	'col-lg-offset-5':
+		'prefix': 'col-lg-offset-5'
+		'body': 'col-lg-offset-5'
+	'col-lg-offset-6':
+		'prefix': 'col-lg-offset-6'
+		'body': 'col-lg-offset-6'
+	'col-lg-offset-7':
+		'prefix': 'col-lg-offset-7'
+		'body': 'col-lg-offset-7'
+	'col-lg-offset-8':
+		'prefix': 'col-lg-offset-8'
+		'body': 'col-lg-offset-8'
+	'col-lg-offset-9':
+		'prefix': 'col-lg-offset-9'
+		'body': 'col-lg-offset-9'
+	'col-lg-offset-10':
+		'prefix': 'col-lg-offset-10'
+		'body': 'col-lg-offset-10'
+	'col-lg-offset-11':
+		'prefix': 'col-lg-offset-11'
+		'body': 'col-lg-offset-11'
+	'table-bordered':
+		'prefix': 'table-bordered'
+		'body': 'table-bordered'
+	'table-responsive':
+		'prefix': 'table-responsive'
+		'body': 'table-responsive'
+	'form-control':
+		'prefix': 'form-control'
+		'body': 'form-control'
+	'form-group':
+		'prefix': 'form-group'
+		'body': 'form-group'
+	'checkbox':
+		'prefix': 'checkbox'
+		'body': 'checkbox'
+	'checkbox-inline':
+		'prefix': 'checkbox-inline'
+		'body': 'checkbox-inline'
+	'input-sm':
+		'prefix': 'input-sm'
+		'body': 'input-sm'
+	'input-lg':
+		'prefix': 'input-lg'
+		'body': 'input-lg'
+	'control-label':
+		'prefix': 'control-label'
+		'body': 'control-label'
+	'input-group-addon':
+		'prefix': 'input-group-addon'
+		'body': 'input-group-addon'
+	'form-control-static':
+		'prefix': 'form-control-static'
+		'body': 'form-control-static'
+	'help-block':
+		'prefix': 'help-block'
+		'body': 'help-block'
+	'btn':
+		'prefix': 'btn'
+		'body': 'btn'
+	'active':
+		'prefix': 'active'
+		'body': 'active'
+	'btn-default':
+		'prefix': 'btn-default'
+		'body': 'btn-default'
+	'btn-primary':
+		'prefix': 'btn-primary'
+		'body': 'btn-primary'
+	'btn-warning':
+		'prefix': 'btn-warning'
+		'body': 'btn-warning'
+	'btn-danger':
+		'prefix': 'btn-danger'
+		'body': 'btn-danger'
+	'btn-success':
+		'prefix': 'btn-success'
+		'body': 'btn-success'
+	'btn-info':
+		'prefix': 'btn-info'
+		'body': 'btn-info'
+	'btn-link':
+		'prefix': 'btn-link'
+		'body': 'btn-link'
+	'btn-lg':
+		'prefix': 'btn-lg'
+		'body': 'btn-lg'
+	'btn-xs':
+		'prefix': 'btn-xs'
+		'body': 'btn-xs'
+	'btn-block':
+		'prefix': 'btn-block'
+		'body': 'btn-block'
+	'fade':
+		'prefix': 'fade'
+		'body': 'fade'
+	'in':
+		'prefix': 'in'
+		'body': 'in'
+	'collapse':
+		'prefix': 'collapse'
+		'body': 'collapse'
+	'collapsing':
+		'prefix': 'collapsing'
+		'body': 'collapsing'
+	'glyphicon':
+		'prefix': 'glyphicon'
+		'body': 'glyphicon'
+	'dropdown':
+		'prefix': 'dropdown'
+		'body': 'dropdown'
+	'dropdown-menu':
+		'prefix': 'dropdown-menu'
+		'body': 'dropdown-menu'
+	'divider':
+		'prefix': 'divider'
+		'body': 'divider'
+	'dropdown-header':
+		'prefix': 'dropdown-header'
+		'body': 'dropdown-header'
+	'dropdown-backdrop':
+		'prefix': 'dropdown-backdrop'
+		'body': 'dropdown-backdrop'
+	'btn-group-vertical':
+		'prefix': 'btn-group-vertical'
+		'body': 'btn-group-vertical'
+	'btn-group':
+		'prefix': 'btn-group'
+		'body': 'btn-group'
+	'dropdown-toggle':
+		'prefix': 'dropdown-toggle'
+		'body': 'dropdown-toggle'
+	'btn-group-justified':
+		'prefix': 'btn-group-justified'
+		'body': 'btn-group-justified'
+	'input-group':
+		'prefix': 'input-group'
+		'body': 'input-group'
+	'col':
+		'prefix': 'col'
+		'body': 'col'
+	'input-group-btn':
+		'prefix': 'input-group-btn'
+		'body': 'input-group-btn'
+	'nav':
+		'prefix': 'nav'
+		'body': 'nav'
+	'nav-divider':
+		'prefix': 'nav-divider'
+		'body': 'nav-divider'
+	'nav-tabs':
+		'prefix': 'nav-tabs'
+		'body': 'nav-tabs'
+	'nav-justified':
+		'prefix': 'nav-justified'
+		'body': 'nav-justified'
+	'nav-tabs-justified':
+		'prefix': 'nav-tabs-justified'
+		'body': 'nav-tabs-justified'
+	'pill-pane':
+		'prefix': 'pill-pane'
+		'body': 'pill-pane'
+	'navbar-header':
+		'prefix': 'navbar-header'
+		'body': 'navbar-header'
+	'navbar-collapse':
+		'prefix': 'navbar-collapse'
+		'body': 'navbar-collapse'
+	'navbar-static-top':
+		'prefix': 'navbar-static-top'
+		'body': 'navbar-static-top'
+	'navbar-fixed-bottom':
+		'prefix': 'navbar-fixed-bottom'
+		'body': 'navbar-fixed-bottom'
+	'navbar-fixed-top':
+		'prefix': 'navbar-fixed-top'
+		'body': 'navbar-fixed-top'
+	'navbar-brand':
+		'prefix': 'navbar-brand'
+		'body': 'navbar-brand'
+	'navbar-toggle':
+		'prefix': 'navbar-toggle'
+		'body': 'navbar-toggle'
+	'icon-bar':
+		'prefix': 'icon-bar'
+		'body': 'icon-bar'
+	'navbar-nav':
+		'prefix': 'navbar-nav'
+		'body': 'navbar-nav'
+	'navbar-left':
+		'prefix': 'navbar-left'
+		'body': 'navbar-left'
+	'navbar-right':
+		'prefix': 'navbar-right'
+		'body': 'navbar-right'
+	'navbar-form':
+		'prefix': 'navbar-form'
+		'body': 'navbar-form'
+	'navbar-btn':
+		'prefix': 'navbar-btn'
+		'body': 'navbar-btn'
+	'navbar-text':
+		'prefix': 'navbar-text'
+		'body': 'navbar-text'
+	'navbar-default':
+		'prefix': 'navbar-default'
+		'body': 'navbar-default'
+	'navbar-link':
+		'prefix': 'navbar-link'
+		'body': 'navbar-link'
+	'navbar-inverse':
+		'prefix': 'navbar-inverse'
+		'body': 'navbar-inverse'
+	'breadcrumb':
+		'prefix': 'breadcrumb'
+		'body': 'breadcrumb'
+	'pagination':
+		'prefix': 'pagination'
+		'body': 'pagination'
+	'pager':
+		'prefix': 'pager'
+		'body': 'pager'
+	'label-default':
+		'prefix': 'label-default'
+		'body': 'label-default'
+	'label-primary':
+		'prefix': 'label-primary'
+		'body': 'label-primary'
+	'label-success':
+		'prefix': 'label-success'
+		'body': 'label-success'
+	'label-info':
+		'prefix': 'label-info'
+		'body': 'label-info'
+	'label-warning':
+		'prefix': 'label-warning'
+		'body': 'label-warning'
+	'label-danger':
+		'prefix': 'label-danger'
+		'body': 'label-danger'
+	'badge':
+		'prefix': 'badge'
+		'body': 'badge'
+	'jumbotron':
+		'prefix': 'jumbotron'
+		'body': 'jumbotron'
+	'thumbnail':
+		'prefix': 'thumbnail'
+		'body': 'thumbnail'
+	'caption':
+		'prefix': 'caption'
+		'body': 'caption'
+	'alert':
+		'prefix': 'alert'
+		'body': 'alert'
+	'alert-link':
+		'prefix': 'alert-link'
+		'body': 'alert-link'
+	'alert-dismissable':
+		'prefix': 'alert-dismissable'
+		'body': 'alert-dismissable'
+	'close':
+		'prefix': 'close'
+		'body': 'close'
+	'alert-success':
+		'prefix': 'alert-success'
+		'body': 'alert-success'
+	'alert-info':
+		'prefix': 'alert-info'
+		'body': 'alert-info'
+	'alert-warning':
+		'prefix': 'alert-warning'
+		'body': 'alert-warning'
+	'alert-danger':
+		'prefix': 'alert-danger'
+		'body': 'alert-danger'
+	'progress':
+		'prefix': 'progress'
+		'body': 'progress'
+	'progress-bar':
+		'prefix': 'progress-bar'
+		'body': 'progress-bar'
+	'progress-bar-success':
+		'prefix': 'progress-bar-success'
+		'body': 'progress-bar-success'
+	'progress-bar-info':
+		'prefix': 'progress-bar-info'
+		'body': 'progress-bar-info'
+	'progress-bar-warning':
+		'prefix': 'progress-bar-warning'
+		'body': 'progress-bar-warning'
+	'progress-bar-danger':
+		'prefix': 'progress-bar-danger'
+		'body': 'progress-bar-danger'
+	'media-body':
+		'prefix': 'media-body'
+		'body': 'media-body'
+	'media':
+		'prefix': 'media'
+		'body': 'media'
+	'media-object':
+		'prefix': 'media-object'
+		'body': 'media-object'
+	'media-heading':
+		'prefix': 'media-heading'
+		'body': 'media-heading'
+	'pull-left':
+		'prefix': 'pull-left'
+		'body': 'pull-left'
+	'media-list':
+		'prefix': 'media-list'
+		'body': 'media-list'
+	'list-group':
+		'prefix': 'list-group'
+		'body': 'list-group'
+	'list-group-item':
+		'prefix': 'list-group-item'
+		'body': 'list-group-item'
+	'list-group-item-heading':
+		'prefix': 'list-group-item-heading'
+		'body': 'list-group-item-heading'
+	'list-group-item-text':
+		'prefix': 'list-group-item-text'
+		'body': 'list-group-item-text'
+	'panel':
+		'prefix': 'panel'
+		'body': 'panel'
+	'panel-body':
+		'prefix': 'panel-body'
+		'body': 'panel-body'
+	'panel-heading':
+		'prefix': 'panel-heading'
+		'body': 'panel-heading'
+	'panel-title':
+		'prefix': 'panel-title'
+		'body': 'panel-title'
+	'panel-footer':
+		'prefix': 'panel-footer'
+		'body': 'panel-footer'
+	'panel-default':
+		'prefix': 'panel-default'
+		'body': 'panel-default'
+	'panel-primary':
+		'prefix': 'panel-primary'
+		'body': 'panel-primary'
+	'panel-success':
+		'prefix': 'panel-success'
+		'body': 'panel-success'
+	'panel-warning':
+		'prefix': 'panel-warning'
+		'body': 'panel-warning'
+	'panel-danger':
+		'prefix': 'panel-danger'
+		'body': 'panel-danger'
+	'panel-info':
+		'prefix': 'panel-info'
+		'body': 'panel-info'
+	'well':
+		'prefix': 'well'
+		'body': 'well'
+	'well-lg':
+		'prefix': 'well-lg'
+		'body': 'well-lg'
+	'well-sm':
+		'prefix': 'well-sm'
+		'body': 'well-sm'
+	'modal-open':
+		'prefix': 'modal-open'
+		'body': 'modal-open'
+	'modal':
+		'prefix': 'modal'
+		'body': 'modal'
+	'modal-dialog':
+		'prefix': 'modal-dialog'
+		'body': 'modal-dialog'
+	'modal-content':
+		'prefix': 'modal-content'
+		'body': 'modal-content'
+	'modal-backdrop':
+		'prefix': 'modal-backdrop'
+		'body': 'modal-backdrop'
+	'modal-header':
+		'prefix': 'modal-header'
+		'body': 'modal-header'
+	'modal-title':
+		'prefix': 'modal-title'
+		'body': 'modal-title'
+	'modal-body':
+		'prefix': 'modal-body'
+		'body': 'modal-body'
+	'modal-footer':
+		'prefix': 'modal-footer'
+		'body': 'modal-footer'
+	'tooltip':
+		'prefix': 'tooltip'
+		'body': 'tooltip'
+	'top':
+		'prefix': 'top'
+		'body': 'top'
+	'right':
+		'prefix': 'right'
+		'body': 'right'
+	'bottom':
+		'prefix': 'bottom'
+		'body': 'bottom'
+	'left':
+		'prefix': 'left'
+		'body': 'left'
+	'tooltip-inner':
+		'prefix': 'tooltip-inner'
+		'body': 'tooltip-inner'
+	'tooltip-arrow':
+		'prefix': 'tooltip-arrow'
+		'body': 'tooltip-arrow'
+	'popover':
+		'prefix': 'popover'
+		'body': 'popover'
+	'popover-title':
+		'prefix': 'popover-title'
+		'body': 'popover-title'
+	'popover-content':
+		'prefix': 'popover-content'
+		'body': 'popover-content'
+	'arrow':
+		'prefix': 'arrow'
+		'body': 'arrow'
+	'carousel':
+		'prefix': 'carousel'
+		'body': 'carousel'
+	'carousel-inner':
+		'prefix': 'carousel-inner'
+		'body': 'carousel-inner'
+	'item':
+		'prefix': 'item'
+		'body': 'item'
+	'prev':
+		'prefix': 'prev'
+		'body': 'prev'
+	'next':
+		'prefix': 'next'
+		'body': 'next'
+	'carousel-control':
+		'prefix': 'carousel-control'
+		'body': 'carousel-control'
+	'glyphicon-chevron-right':
+		'prefix': 'glyphicon-chevron-right'
+		'body': 'glyphicon-chevron-right'
+	'icon-next':
+		'prefix': 'icon-next'
+		'body': 'icon-next'
+	'carousel-indicators':
+		'prefix': 'carousel-indicators'
+		'body': 'carousel-indicators'
+	'carousel-caption':
+		'prefix': 'carousel-caption'
+		'body': 'carousel-caption'
+	'hide':
+		'prefix': 'hide'
+		'body': 'hide'
+	'show':
+		'prefix': 'show'
+		'body': 'show'
+	'invisible':
+		'prefix': 'invisible'
+		'body': 'invisible'
+	'text-hide':
+		'prefix': 'text-hide'
+		'body': 'text-hide'
+	'affix':
+		'prefix': 'affix'
+		'body': 'affix'
+	'hidden':
+		'prefix': 'hidden'
+		'body': 'hidden'
+	'visible-xs':
+		'prefix': 'visible-xs'
+		'body': 'visible-xs'
+	'visible-sm':
+		'prefix': 'visible-sm'
+		'body': 'visible-sm'
+	'visible-md':
+		'prefix': 'visible-md'
+		'body': 'visible-md'
+	'visible-lg':
+		'prefix': 'visible-lg'
+		'body': 'visible-lg'
+	'hidden-xs':
+		'prefix': 'hidden-xs'
+		'body': 'hidden-xs'
+	'hidden-sm':
+		'prefix': 'hidden-sm'
+		'body': 'hidden-sm'
+	'hidden-md':
+		'prefix': 'hidden-md'
+		'body': 'hidden-md'
+	'hidden-lg':
+		'prefix': 'hidden-lg'
+		'body': 'hidden-lg'
+	'visible-print':
+		'prefix': 'visible-print'
+		'body': 'visible-print'
+	'hidden-print':
+		'prefix': 'hidden-print'
+		'body': 'hidden-print'

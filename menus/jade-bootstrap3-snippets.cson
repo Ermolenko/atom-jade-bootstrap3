@@ -1,0 +1,22 @@
+# See https://atom.io/docs/latest/hacking-atom-package-word-count#menus for more details
+'context-menu':
+  'atom-text-editor': [
+    {
+      'label': 'Toggle jade-bootstrap3-snippets'
+      'command': 'jade-bootstrap3-snippets:toggle'
+    }
+  ]
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'jade-bootstrap3-snippets'
+      'submenu': [
+        {
+          'label': 'Toggle'
+          'command': 'jade-bootstrap3-snippets:toggle'
+        }
+      ]
+    ]
+  }
+]
