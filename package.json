@@ -1,18 +1,16 @@
 {
-  "name": "jade-bootstrap3-snippets",
-  "main": "./lib/jade-bootstrap3-snippets",
-  "version": "0.1.0",
-  "description": "Bootstrap3 Jade Snippets for Atom",
-  "keywords": [
-  ],
-  "activationCommands": {
-    "atom-workspace": "jade-bootstrap3-snippets:toggle"
-  },
-  "repository": "https://github.com/atom/jade-bootstrap3-snippets",
-  "license": "MIT",
-  "engines": {
-    "atom": ">=1.0.0 <2.0.0"
-  },
-  "dependencies": {
-  }
+    "name": "jade-bootstrap3-snippets",
+    "main": "./lib/jade-bootstrap3-snippets",
+    "version": "0.1.0",
+    "description": "Bootstrap3 Jade Snippets for Atom",
+    "keywords": [],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/GlebSkripnikov/atom-jade-bootstrap3.git"
+    },
+    "license": "MIT",
+    "engines": {
+        "atom": ">=1.0.0 <2.0.0"
+    },
+    "dependencies": {}
 }
