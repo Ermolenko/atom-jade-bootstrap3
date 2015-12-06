@@ -1,7 +1,7 @@
 {
   "name": "jade-bootstrap3-snippets",
   "main": "./lib/jade-bootstrap3-snippets",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Bootstrap3 Jade Snippets for Atom",
   "keywords": [],
   "repository": {
